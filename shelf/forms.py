@@ -26,8 +26,17 @@ class SignupForm(UserCreationForm):
         # UserCreationForm always includes username; we drive auth from handle instead.
         if "username" in self.fields:
             del self.fields["username"]
-        for name in self.fields:
-            self.fields[name].widget.attrs.setdefault("class", "field")
+        placeholders = {
+            "handle": "tom",
+            "display_name": "Tom Barratt",
+            "email": "you@example.com",
+            "password1": "At least 8 characters",
+            "password2": "Repeat your password",
+        }
+        for name, field in self.fields.items():
+            field.widget.attrs.setdefault("class", "field")
+            if name in placeholders:
+                field.widget.attrs.setdefault("placeholder", placeholders[name])
 
     def clean_handle(self):
         handle = slugify(self.cleaned_data["handle"])
@@ -56,8 +65,14 @@ class LoginForm(AuthenticationForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["username"].label = "Handle"
-        for name in self.fields:
-            self.fields[name].widget.attrs.setdefault("class", "field")
+        placeholders = {
+            "username": "tom",
+            "password": "Your password",
+        }
+        for name, field in self.fields.items():
+            field.widget.attrs.setdefault("class", "field")
+            if name in placeholders:
+                field.widget.attrs.setdefault("placeholder", placeholders[name])
 
 
 class AddEssayForm(forms.Form):
