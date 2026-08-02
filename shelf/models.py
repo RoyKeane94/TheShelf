@@ -223,3 +223,47 @@ class Profile(TimestampedModel):
         if len(parts) == 1:
             return parts[0][:2].upper()
         return (parts[0][0] + parts[1][0]).upper()
+
+
+class Log(TimestampedModel):
+    """Append-only event log. Written automatically from error handlers and similar.
+
+    Never edit or delete rows from the product path — the point is a durable trail of
+    what happened, the same way Shelving keeps stamps even after un-shelving.
+    """
+
+    kind = models.CharField(max_length=64, db_index=True)
+    status_code = models.PositiveSmallIntegerField(null=True, blank=True, db_index=True)
+    path = models.CharField(max_length=1000, blank=True)
+    message = models.TextField(blank=True)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="logs",
+    )
+    meta = models.JSONField(default=dict, blank=True)
+
+    class Meta:
+        ordering = ["-created_at"]
+        indexes = [models.Index(fields=["kind", "-created_at"])]
+
+    def __str__(self):
+        code = f" {self.status_code}" if self.status_code else ""
+        return f"{self.kind}{code} {self.path}".strip()
+
+    @classmethod
+    def record(cls, *, kind, status_code=None, path="", message="", user=None, meta=None):
+        """Best-effort write. Never raises — logging must not break the page that needs it."""
+        try:
+            return cls.objects.create(
+                kind=kind,
+                status_code=status_code,
+                path=(path or "")[:1000],
+                message=message or "",
+                user=user if getattr(user, "is_authenticated", False) else None,
+                meta=meta or {},
+            )
+        except Exception:
+            return None

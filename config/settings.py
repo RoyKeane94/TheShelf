@@ -25,11 +25,22 @@ if railway_domain := os.environ.get("RAILWAY_PUBLIC_DOMAIN"):
 if not DEBUG and ".railway.app" not in ALLOWED_HOSTS:
     ALLOWED_HOSTS.append(".railway.app")
 
-CSRF_TRUSTED_ORIGINS = [
-    o.strip()
-    for o in os.environ.get("DJANGO_CSRF_TRUSTED_ORIGINS", "").split(",")
-    if o.strip()
-]
+def _csrf_origins_from_env(raw: str) -> list[str]:
+    """CSRF origins must include a scheme. Accept bare hosts for convenience."""
+    origins = []
+    for part in raw.split(","):
+        origin = part.strip()
+        if not origin:
+            continue
+        if "://" not in origin:
+            origin = f"https://{origin}"
+        origins.append(origin)
+    return origins
+
+
+CSRF_TRUSTED_ORIGINS = _csrf_origins_from_env(
+    os.environ.get("DJANGO_CSRF_TRUSTED_ORIGINS", "")
+)
 if railway_domain := os.environ.get("RAILWAY_PUBLIC_DOMAIN"):
     origin = f"https://{railway_domain}"
     if origin not in CSRF_TRUSTED_ORIGINS:

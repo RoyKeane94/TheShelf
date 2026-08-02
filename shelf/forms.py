@@ -28,7 +28,7 @@ class SignupForm(UserCreationForm):
             del self.fields["username"]
         placeholders = {
             "handle": "tom",
-            "display_name": "Tom Barratt",
+            "display_name": "Tom Jones",
             "email": "you@example.com",
             "password1": "At least 8 characters",
             "password2": "Repeat your password",

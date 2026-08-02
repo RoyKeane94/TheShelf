@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="The Shelf">
+  <rect width="32" height="32" fill="#0F3ECF"/>
+  <!-- Fully orange book: cover, spine, and fore-edge -->
+  <path fill="#E8471E" d="M10.2 7.2h12.4v17.6H10.2z"/>
+  <path fill="#C73A16" d="M8.4 8L10.2 7.2v17.6L8.4 25.6z"/>
+  <path fill="#D63F19" d="M22.6 7.2L24 8v17.6l-1.4.8z"/>
+</svg>

@@ -11,7 +11,7 @@ from django.urls import reverse
 from django.views.decorators.http import require_GET, require_http_methods, require_POST
 
 from .forms import AddEssayForm, LoginForm, SignupForm
-from .models import Essay, Note, Profile, Rating, Shelf, Shelving
+from .models import Essay, Log, Note, Profile, Rating, Shelf, Shelving
 from .ranking import circulation, ranked, with_stats
 from .services import add_essay, log_essay, user_has_logged, user_rating
 
@@ -482,6 +482,73 @@ class ShelfLoginView(LoginView):
 
 class ShelfLogoutView(LogoutView):
     next_page = "landing"
+
+
+_ERROR_COPY = {
+    400: {
+        "title": "That request didn’t make sense.",
+        "sub": "Something in the ask was off. Go back to the shelf and try again from there.",
+    },
+    403: {
+        "title": "You’re not allowed on this page.",
+        "sub": "This corner of the shelf is closed. Browse what’s public, or log in if you have an account.",
+    },
+    404: {
+        "title": "This page isn’t on the shelf.",
+        "sub": "Nothing lives at that address. The shelves below are still open — pick one up from there.",
+    },
+    500: {
+        "title": "Something broke on our side.",
+        "sub": "The request didn’t finish. We’ve noted it. Give it a moment, then try again.",
+    },
+}
+
+
+def _error_shelves():
+    try:
+        return _featured_shelves()
+    except Exception:
+        return []
+
+
+def _render_error(request, status_code, exception=None):
+    copy = _ERROR_COPY.get(status_code, _ERROR_COPY[500])
+    path = getattr(request, "path", "") or ""
+    Log.record(
+        kind=f"error.{status_code}",
+        status_code=status_code,
+        path=path,
+        message=str(exception) if exception else "",
+        user=getattr(request, "user", None),
+        meta={"method": getattr(request, "method", "")},
+    )
+    return render(
+        request,
+        "shelf/error.html",
+        {
+            "status_code": status_code,
+            "error_title": copy["title"],
+            "error_sub": copy["sub"],
+            "shelves": _error_shelves(),
+        },
+        status=status_code,
+    )
+
+
+def bad_request(request, exception):
+    return _render_error(request, 400, exception)
+
+
+def permission_denied(request, exception):
+    return _render_error(request, 403, exception)
+
+
+def page_not_found(request, exception):
+    return _render_error(request, 404, exception)
+
+
+def server_error(request):
+    return _render_error(request, 500)
 
 
 @login_required

@@ -3,7 +3,7 @@ import json
 from django.test import TestCase
 from django.urls import reverse
 
-from shelf.models import Essay, Rating, Shelving
+from shelf.models import Essay, Log, Rating, Shelving
 from shelf.ranking import ranked, score, with_stats
 from shelf.services import log_essay
 from shelf.tests import PASSWORD, make_essay, make_shelf, make_user, stamp
@@ -55,6 +55,32 @@ class RouteTests(TestCase):
 
         shelf_page = self.client.get(shelf_url)
         self.assertContains(shelf_page, reverse("essay", args=["routed"]))
+
+
+class ErrorPageTests(TestCase):
+    def setUp(self):
+        self.user = make_user("errpage")
+        self.essay = make_essay("On the shelf", slug="on-the-shelf")
+        self.shelf = make_shelf(self.user, "Public picks", slug="public-picks")
+        stamp(self.user, self.essay, self.shelf, months_ago=2)
+
+    def test_404_uses_the_styled_error_page_and_logs(self):
+        response = self.client.get("/this-path-does-not-exist/")
+        self.assertEqual(response.status_code, 404)
+        self.assertTemplateUsed(response, "shelf/error.html")
+        self.assertContains(response, "This page isn’t on the shelf.", status_code=404)
+        self.assertContains(response, "Public shelves", status_code=404)
+        self.assertContains(response, "Public picks", status_code=404)
+        entry = Log.objects.get(kind="error.404")
+        self.assertEqual(entry.status_code, 404)
+        self.assertEqual(entry.path, "/this-path-does-not-exist/")
+
+    def test_object_404_is_logged_automatically(self):
+        response = self.client.get(reverse("essay", args=["nope"]))
+        self.assertEqual(response.status_code, 404)
+        self.assertTrue(
+            Log.objects.filter(kind="error.404", path=response.wsgi_request.path).exists()
+        )
 
 
 class LogEndpointTests(TestCase):

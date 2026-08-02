@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load shelf_tags %}
+
+{% block title %}{{ status_code }}{% endblock %}
+
+{% block content %}
+<section class="hero dots error-hero">
+  <div class="hero-in">
+    <p class="error-code">{{ status_code }}</p>
+    <h1>{{ error_title }}</h1>
+    <p class="sub">{{ error_sub }}</p>
+    <div class="cta-row">
+      <a class="cta" href="{% url 'landing' %}">Back to The Shelf <span>→</span></a>
+      <a class="cta line" href="{% url 'landing' %}#shelves">Browse public shelves</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="shelves">
+  <div class="wrap">
+    <div class="head">
+      <h2>Public shelves are still the <em>discovery surface.</em></h2>
+      <p>A person you trust, and the twenty things they kept. Tap a shelf to open it.</p>
+    </div>
+    <div class="shelf-grid">
+      {% for s in shelves %}
+      <a class="shelf-card{% if forloop.first %} featured{% endif %}" href="{{ s.get_absolute_url }}">
+        <div class="sc-by">@{{ s.owner.profile.handle }}{% if s.owner.profile.display_name %} · {{ s.owner.profile.display_name }}{% endif %}</div>
+        <h3>{{ s.name }}</h3>
+        <div class="sc-desc">{{ s.description }}</div>
+        <div class="sc-strip">
+          {% for sh in s.active_shelvings|slice:":8" %}
+          <i style="background:{{ sh.essay|ink_bg }}" title="{{ sh.essay.title }} · {{ sh.essay.author }}"></i>
+          {% endfor %}
+        </div>
+        <div class="sc-n">{{ s.n_items }} on the shelf · hover a spine</div>
+      </a>
+      {% empty %}
+      <p class="empty">No public shelves yet. <a href="{% url 'landing' %}">Head home</a> and start one.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

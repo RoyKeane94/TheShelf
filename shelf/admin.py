@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Essay, Note, Profile, Rating, Shelf, Shelving
+from .models import Essay, Log, Note, Profile, Rating, Shelf, Shelving
 
 
 @admin.register(Essay)
@@ -54,3 +54,11 @@ class NoteAdmin(admin.ModelAdmin):
 class ProfileAdmin(admin.ModelAdmin):
     list_display = ("handle", "display_name", "user")
     search_fields = ("handle", "display_name", "user__username")
+
+
+@admin.register(Log)
+class LogAdmin(admin.ModelAdmin):
+    list_display = ("kind", "status_code", "path", "user", "created_at")
+    list_filter = ("kind", "status_code")
+    search_fields = ("path", "message", "kind")
+    readonly_fields = ("created_at", "updated_at")
