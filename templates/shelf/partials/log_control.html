@@ -1,0 +1,27 @@
+{% load shelf_tags %}
+{# Primary action: Log it. Stars alongside rate-and-log in one gesture. #}
+<div class="log-control{% if compact %} compact{% endif %}" id="log-{{ essay.slug }}">
+  {% if user.is_authenticated %}
+  <form data-log-form
+        hx-post="{% url 'log' essay.slug %}"
+        hx-target="#log-{{ essay.slug }}"
+        hx-swap="outerHTML"
+        class="after-line">
+    {% if compact %}<input type="hidden" name="compact" value="1">{% endif %}
+    <button type="submit" class="btn solid{% if logged %} logged{% endif %}">
+      {% if logged %}Logged ✓{% else %}Log it{% endif %}
+    </button>
+    {% if rating %}
+      {% include "shelf/partials/stars.html" with prefix=essay.slug half_stars=rating.half_stars %}
+    {% else %}
+      {% include "shelf/partials/stars.html" with prefix=essay.slug half_stars=None %}
+    {% endif %}
+  </form>
+  {% else %}
+  <a class="btn solid" href="{% url 'login' %}?next={{ essay.get_absolute_url }}">Log it</a>
+  {% if not compact %}
+  {# One explanation per page is enough; a list of them is noise. #}
+  <span class="hint" style="margin:0">Sign in to stamp this on your shelf.</span>
+  {% endif %}
+  {% endif %}
+</div>

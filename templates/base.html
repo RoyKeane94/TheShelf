@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}The Shelf{% endblock %} — a permanent home for essays</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..800;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blue: { DEFAULT: '#0F3ECF', deep: '#0A2AA0', ink: '#071A63' },
+            orange: { DEFAULT: '#E8471E' },
+            ink: '#0B1226',
+            grey: '#6C7488',
+            hair: { DEFAULT: '#E6E8EF', 2: '#F2F3F7' },
+            cream: '#F7F6F2',
+            dash: '#CFCCC3',
+          },
+          fontFamily: {
+            sans: ['"Inter Tight"', 'system-ui', 'sans-serif'],
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+          },
+          maxWidth: { shelf: '1500px' },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="{% static 'css/shelf.css' %}">
+  <script src="https://unpkg.com/htmx.org@2.0.4" defer></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="{% static 'js/shelf.js' %}" defer></script>
+  {% block head %}{% endblock %}
+</head>
+<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+  <nav class="nav dots">
+    <div class="wrap">
+      <div class="nav-l">
+        <a href="{% url 'landing' %}#how">How it works</a>
+        <a href="{% url 'landing' %}#shelves">Shelves</a>
+        <a href="{% url 'discover' %}">Discover</a>
+        {% if user.is_authenticated %}
+          <a href="{% url 'add' %}" data-addmodal data-auth="1">Add an essay</a>
+        {% else %}
+          <a href="{% url 'login' %}?next={% url 'add' %}">Add an essay</a>
+        {% endif %}
+      </div>
+      <div class="mark"><a href="{% url 'landing' %}">The Shelf</a></div>
+      <div class="nav-r">
+        {% if user.is_authenticated %}
+          <a href="{% url 'profile' user.profile.handle %}">@{{ user.profile.handle }}</a>
+          <a class="pill" href="{% url 'add' %}" data-addmodal data-auth="1">Add an essay</a>
+        {% else %}
+          <a href="{% url 'login' %}">Log in</a>
+          <a class="pill" href="{% url 'signup' %}">Sign up</a>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+
+  {% if messages %}
+  <div class="messages">
+    {% for message in messages %}
+      <div class="msg">{{ message }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% block content %}{% endblock %}
+
+  <footer class="ftr">
+    <div class="fverts"><i></i><i></i><i></i><i></i></div>
+    <div class="wrap fgrid">
+      <div class="fcol">
+        <div class="fmark">The Shelf</div>
+        <p class="ftag">One permanent page per essay,<br>stamped every time it comes back.</p>
+        <p class="fcopy">© 2026 The Shelf</p>
+      </div>
+      <div class="fcol">
+        <h5>Read</h5>
+        <a href="{% url 'landing' %}#how"><span>How it works</span></a>
+        <a href="{% url 'landing' %}#shelves"><span>Shelves</span></a>
+        <a href="{% url 'discover' %}"><span>Newly shelved</span></a>
+      </div>
+      <div class="fcol">
+        <h5>Curators</h5>
+        <a href="{% url 'landing' %}#shelves"><span>Featured shelves</span></a>
+        <a href="{% url 'discover' %}"><span>Held up longest</span></a>
+        <a href="{% url 'add' %}"><span>Add an essay</span></a>
+      </div>
+      <div class="fcol">
+        <h5>About</h5>
+        <a href="{% url 'landing' %}#shelves"><span>Browse shelves</span></a>
+        <a href="{% url 'signup' %}"><span>Sign up</span></a>
+        <a href="{% url 'landing' %}#how"><span>Contact</span></a>
+      </div>
+    </div>
+    <div class="engraving" id="engraving"></div>
+  </footer>
+
+  {% if user.is_authenticated %}
+  <div class="mscrim" id="mscrim"></div>
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-top">
+      <h3>Add an essay</h3>
+      <button class="m-close" id="mclose" type="button">Close</button>
+    </div>
+    <div class="modal-body">
+      <div id="modalmount" data-url="{% url 'add_modal' %}"></div>
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

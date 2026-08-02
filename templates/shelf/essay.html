@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load shelf_tags %}
+
+{% block title %}{{ essay.title }}{% endblock %}
+
+{% block content %}
+<section class="essay-hero dots">
+  <div class="wrap" style="position:relative">
+    <div class="meta">
+      {% if essay.publication %}{{ essay.publication }} · {% endif %}
+      {% if essay.published_year %}{{ essay.published_year }}{% endif %}
+      {% if essay.reading_minutes %} · {{ essay.reading_minutes }} min{% endif %}
+    </div>
+    <h1>{{ essay.title }}</h1>
+    <div class="byline">{{ essay.author }}</div>
+    <div class="essay-actions">
+      {% include "shelf/partials/log_control.html" with essay=essay logged=logged rating=rating %}
+      <a class="btn ghost" href="{{ essay.url }}" target="_blank" rel="noopener">Read at the publisher →</a>
+    </div>
+    {% if essay.published_year %}
+    <div class="essay-year" aria-hidden="true">{{ essay.published_year }}</div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+   <div class="essay-body">
+    <div class="block">
+      <p class="logged">
+        <b class="figure">{{ essay.n_shelvings|default:0 }}</b>
+        <span class="label">
+          logs{% if circ %} since {{ circ.first_year }}{% if circ.still_going %}, still going{% endif %}{% endif %}
+        </span>
+      </p>
+    </div>
+
+    {% if essay.blurb %}
+    <div class="block">
+      <p class="essay-blurb">{{ essay.blurb }}</p>
+    </div>
+    {% endif %}
+
+    <div class="block">
+      <h3>{% if on_shelves %}On {{ on_shelves|length }} public shel{{ on_shelves|length|pluralize:"f,ves" }}{% else %}Public shelves{% endif %}</h3>
+      {% for s in on_shelves %}
+      <a class="rel" href="{{ s.get_absolute_url }}">
+        <span class="av">{{ s.owner.profile.initials }}</span>
+        <span>
+          <span class="row-t" style="font-size:16px">{{ s.name }}</span>
+          <div class="row-b">@{{ s.owner.profile.handle }}</div>
+        </span>
+      </a>
+      {% empty %}
+      <p class="empty">Nobody has filed this on a named shelf yet.</p>
+      {% endfor %}
+    </div>
+
+    <div class="block">
+      <h3>Notes</h3>
+      {% for n in notes %}
+      <div class="note-item">
+        <div class="note-who">@{{ n.user.profile.handle }} · {{ n.created_at|date:"d M Y"|upper }}</div>
+        <p>{{ n.body }}</p>
+      </div>
+      {% empty %}
+      <p class="empty">No notes yet.</p>
+      {% endfor %}
+    </div>
+
+    <div class="block">
+      <h3>Reads alongside</h3>
+      {% for r in related %}
+      <a class="rel" href="{{ r.essay.get_absolute_url }}">
+        <span>
+          <span class="row-t" style="font-size:16px">
+            <em style="background:{{ r.essay|ink_bg }}"></em>{{ r.essay.title }}
+          </span>
+          <div class="row-b">{{ r.essay.author }}{% if r.essay.published_year %} · {{ r.essay.published_year }}{% endif %}</div>
+          <div class="rel-why">shares {{ r.shared|join:", " }}</div>
+        </span>
+      </a>
+      {% empty %}
+      <p class="empty">No tag overlap yet.</p>
+      {% endfor %}
+    </div>
+   </div>
+  </div>
+</section>
+{% endblock %}

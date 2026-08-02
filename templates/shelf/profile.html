@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load shelf_tags %}
+
+{% block title %}@{{ profile.handle }}{% endblock %}
+
+{% block content %}
+<section class="essay-hero dots">
+  <div class="wrap">
+    <div class="meta">Public shelves</div>
+    <h1>@{{ profile.handle }}</h1>
+    {% if profile.display_name %}<div class="byline">{{ profile.display_name }}</div>{% endif %}
+    {% if profile.bio %}<p class="sub" style="margin:18px 0 0;text-align:left;max-width:54ch">{{ profile.bio }}</p>{% endif %}
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head">
+      <h2>Shelves</h2>
+    </div>
+    <div class="shelf-grid">
+      {% for s in shelves %}
+      <a class="shelf-card{% if forloop.first %} featured{% endif %}" href="{{ s.get_absolute_url }}">
+        <div class="sc-by">@{{ profile.handle }}</div>
+        <h3>{{ s.name }}</h3>
+        <div class="sc-desc">{{ s.description }}</div>
+        <div class="sc-strip">
+          {% for sh in s.active_shelvings|slice:":10" %}
+          <i style="background:{{ sh.essay|ink_bg }}" title="{{ sh.essay.title }}"></i>
+          {% endfor %}
+        </div>
+        <div class="sc-n">{{ s.n_items }} on the shelf</div>
+      </a>
+      {% empty %}
+      <p class="empty">No public shelves yet.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head">
+      <h2>Recent verdicts</h2>
+      <p>What @{{ profile.handle }} has logged lately.</p>
+    </div>
+    <div class="shelf-body">
+      {% for s in recent %}
+      <a class="row" href="{{ s.essay.get_absolute_url }}">
+        <span class="row-i">{{ forloop.counter|stringformat:"02d" }}</span>
+        <span>
+          <span class="row-t"><em style="background:{{ s.essay|ink_bg }}"></em>{{ s.essay.title }}</span>
+          <div class="row-b">
+            {{ s.essay.author }}
+            · shelved to {{ s.shelf.name }}
+            · {{ s.created_at|date:"d M Y" }}
+            {% if s.user_rating %} · {{ s.user_rating.half_stars|half_stars_display }}{% endif %}
+          </div>
+        </span>
+        <span class="go">→</span>
+      </a>
+      {% empty %}
+      <p class="empty">Nothing logged yet.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

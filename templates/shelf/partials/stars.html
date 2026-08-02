@@ -1,0 +1,23 @@
+{% load shelf_tags %}
+{% comment %}
+  Half-star control. half_stars is 1..10 or empty.
+  Prefix field ids with `prefix` so landing + modal instances do not collide.
+{% endcomment %}
+<div class="stars" data-stars data-prefix="{{ prefix }}">
+  <div class="star-row" id="{{ prefix }}-row" role="slider" tabindex="0"
+       aria-label="Rating out of five" aria-valuemin="0" aria-valuemax="5"
+       aria-valuenow="{% if half_stars %}{% widthratio half_stars 2 1 %}{% else %}0{% endif %}"
+       data-value="{{ half_stars|default:0 }}">
+    {% for i in "12345" %}
+    <span class="star" data-i="{{ forloop.counter }}">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path class="out" d="M12 2.6l2.9 5.9 6.5.95-4.7 4.6 1.1 6.45L12 17.45 6.2 20.5l1.1-6.45-4.7-4.6 6.5-.95z"/></svg>
+      <span class="star-clip"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M12 2.6l2.9 5.9 6.5.95-4.7 4.6 1.1 6.45L12 17.45 6.2 20.5l1.1-6.45-4.7-4.6 6.5-.95z"/></svg></span>
+    </span>
+    {% endfor %}
+  </div>
+  <span class="star-val" id="{{ prefix }}-val">
+    {% if half_stars %}{{ half_stars|half_stars_display }}{% else %}<em>No rating</em>{% endif %}
+  </span>
+  <button type="button" class="star-clear" id="{{ prefix }}-clear" {% if not half_stars %}hidden{% endif %}>Clear</button>
+  <input type="hidden" name="half_stars" id="{{ prefix }}-half" value="{{ half_stars|default:'' }}">
+</div>

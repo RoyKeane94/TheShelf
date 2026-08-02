@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load shelf_tags %}
+
+{% block title %}Discover{% endblock %}
+
+{% block content %}
+<section class="sec" style="padding-top:72px">
+  <div class="wrap">
+    <div class="head">
+      <h2>Newly logged, and what has <em>held up.</em></h2>
+      <p>A feed of recent stamps, and the pieces people keep coming back to. No scores — just the record.</p>
+    </div>
+    <div class="two">
+      <div>
+        <h3>Newly logged</h3>
+        <div style="margin-top:26px">
+          {% for f in feed %}
+          <div class="feed-item">
+            <span class="av">{{ f.user.profile.initials }}</span>
+            <span style="flex:1">
+              <div class="act">
+                <a href="{% url 'profile' f.user.profile.handle %}"><b>@{{ f.user.profile.handle }}</b></a>
+                shelved to
+                <a href="{{ f.shelf.get_absolute_url }}"><b>{{ f.shelf.name }}</b></a>
+                · {{ f.created_at|timesince }} ago
+              </div>
+              <a class="row-t" href="{{ f.essay.get_absolute_url }}"><em style="background:{{ f.essay|ink_bg }}"></em>{{ f.essay.title }}</a>
+              <div class="row-b">{{ f.essay.author }}{% if f.essay.published_year %} · {{ f.essay.published_year }}{% endif %}</div>
+              <div style="margin-top:12px">
+                {% include "shelf/partials/log_control.html" with essay=f.essay logged=f.essay.viewer_logged rating=f.essay.viewer_rating compact=True %}
+              </div>
+            </span>
+          </div>
+          {% empty %}
+          <p class="empty">Nothing logged yet.</p>
+          {% endfor %}
+        </div>
+      </div>
+      <div>
+        <h3>Held up longest</h3>
+        <div style="margin-top:26px">
+          {% for e in held %}
+          <div class="row drow">
+            <span class="row-i">{{ forloop.counter|stringformat:"02d" }}</span>
+            <span>
+              <a class="row-t" href="{{ e.get_absolute_url }}">{{ e.title }}</a>
+              <div class="row-b">{{ e.author }}{% if e.published_year %} · {{ e.published_year }}{% endif %}</div>
+              {% if e.circ %}
+              {% circulation_bar e.circ.first_year e.circ.last_year e.circ.still_going held_min_year as bar %}
+              <div class="span"><i style="left:{{ bar.left }}%;right:{{ bar.right }}%"></i></div>
+              <div class="span-lab"><span>{{ bar.label_left }}</span><span>{{ bar.label_right }}</span></div>
+              {% endif %}
+              <div style="margin-top:14px">
+                {% include "shelf/partials/log_control.html" with essay=e logged=e.viewer_logged rating=e.viewer_rating compact=True %}
+              </div>
+            </span>
+          </div>
+          {% empty %}
+          <p class="empty">Nothing held up yet.</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

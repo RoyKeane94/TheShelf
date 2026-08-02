@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Add an essay{% endblock %}
+
+{% block content %}
+<section class="sec" style="padding-top:72px">
+  <div class="wrap">
+    <div class="head">
+      <h2>Something missing? <em>Put it on the shelf.</em></h2>
+    </div>
+    <div class="add">
+      <div class="add-note">
+        <p>Anyone can add an essay. It gets a permanent page from the moment you submit it, and it stays there whether or not anyone else ever logs it.</p>
+        <p>Give it a line of your own rather than pasting the standfirst. The blurb is what makes someone click, and yours will be better than the publisher's.</p>
+        <p>Publication, year and reading time are left blank — we do not fetch the page. Fill those in later, or leave them empty.</p>
+      </div>
+      <div>
+        {% include "shelf/partials/add_form.html" with form=form form_prefix=form_prefix in_modal=False %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

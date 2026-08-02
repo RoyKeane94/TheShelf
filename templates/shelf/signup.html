@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Sign up{% endblock %}
+
+{% block content %}
+<section class="sec" style="padding-top:72px">
+  <div class="wrap">
+    <div class="auth-box">
+      <div class="head">
+        <h2>Make a shelf <em>under your name.</em></h2>
+        <p>Your handle is public. Everything you log sits under it.</p>
+      </div>
+      <form method="post" novalidate>
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="field-row">
+          <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+          {{ field }}
+          {% if field.help_text %}<p class="field-hint">{{ field.help_text }}</p>{% endif %}
+          {% if field.errors %}<ul class="errorlist">{% for e in field.errors %}<li>{{ e }}</li>{% endfor %}</ul>{% endif %}
+        </div>
+        {% endfor %}
+        {% if form.non_field_errors %}
+        <ul class="errorlist">{% for e in form.non_field_errors %}<li>{{ e }}</li>{% endfor %}</ul>
+        {% endif %}
+        <button class="btn solid" type="submit">Create account</button>
+      </form>
+      <p class="hint">Already have one? <a href="{% url 'login' %}">Log in</a></p>
+    </div>
+  </div>
+</section>
+{% endblock %}

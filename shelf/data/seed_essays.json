@@ -1,0 +1,2370 @@
+[
+  {
+    "title": "The Housing Theory of Everything",
+    "author": "Sam Bowman, John Myers & Ben Southwood",
+    "publication": "Works in Progress",
+    "year": 2021,
+    "url": "https://worksinprogress.co/issue/the-housing-theory-of-everything/",
+    "minutes": 34,
+    "tags": [
+      "cities",
+      "policy",
+      "growth"
+    ],
+    "blurb": "Takes a dozen unrelated-looking problems and shows one constraint sitting under all of them. The reframe is the thing worth stealing, not the housing data.",
+    "first": "2021-09",
+    "last": "2026-07",
+    "n": 412
+  },
+  {
+    "title": "Meditations on Moloch",
+    "author": "Scott Alexander",
+    "publication": "Slate Star Codex",
+    "year": 2014,
+    "url": "https://slatestarcodex.com/2014/07/30/meditations-on-moloch/",
+    "minutes": 52,
+    "tags": [
+      "systems",
+      "incentives",
+      "philosophy"
+    ],
+    "blurb": "A name for the thing that happens when everyone acts rationally and the outcome is still terrible. Twelve years on it is still the vocabulary people reach for.",
+    "first": "2014-08",
+    "last": "2026-07",
+    "n": 938
+  },
+  {
+    "title": "Reality Has a Surprising Amount of Detail",
+    "author": "John Salvatier",
+    "publication": "John Salvatier",
+    "year": 2017,
+    "url": "https://johnsalvatier.org/blog/2017/reality-has-a-surprising-amount-of-detail",
+    "minutes": 11,
+    "tags": [
+      "learning",
+      "craft",
+      "attention"
+    ],
+    "blurb": "The gap between reading about a thing and doing it is wider than anyone admits. A short piece that quietly rewires how you approach new skills.",
+    "first": "2018-01",
+    "last": "2026-06",
+    "n": 687
+  },
+  {
+    "title": "The Bitter Lesson",
+    "author": "Richard Sutton",
+    "publication": "Incomplete Ideas",
+    "year": 2019,
+    "url": "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
+    "minutes": 7,
+    "tags": [
+      "ai",
+      "research",
+      "scale"
+    ],
+    "blurb": "Forty years of AI history compressed into one uncomfortable pattern: general methods that leverage computation beat clever human priors. Every hype cycle forgets it anyway.",
+    "first": "2019-03",
+    "last": "2026-07",
+    "n": 534
+  },
+  {
+    "title": "Maker's Schedule, Manager's Schedule",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2009,
+    "url": "https://paulgraham.com/makersschedule.html",
+    "minutes": 8,
+    "tags": [
+      "work",
+      "time",
+      "productivity"
+    ],
+    "blurb": "Two incompatible calendars share one office. The essay that gave a generation permission to block their mornings and feel less guilty about it.",
+    "first": "2010-02",
+    "last": "2026-05",
+    "n": 891
+  },
+  {
+    "title": "How to Do Great Work",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2023,
+    "url": "https://paulgraham.com/greatwork.html",
+    "minutes": 64,
+    "tags": [
+      "career",
+      "creativity",
+      "work"
+    ],
+    "blurb": "Graham's late-career synthesis: curiosity as compass, taste as filter, and the boring middle where most people quit. Long, but it earns the length.",
+    "first": "2023-07",
+    "last": "2026-07",
+    "n": 623
+  },
+  {
+    "title": "Fast",
+    "author": "Patrick Collison",
+    "publication": "Patrick Collison",
+    "year": 2018,
+    "url": "https://patrickcollison.com/fast",
+    "minutes": 9,
+    "tags": [
+      "history",
+      "progress",
+      "speed"
+    ],
+    "blurb": "A scrapbook of things that happened faster than you think they should have. Less argument than provocation — and the provocation lands.",
+    "first": "2019-01",
+    "last": "2026-04",
+    "n": 445
+  },
+  {
+    "title": "The Tyranny of the Marginal User",
+    "author": "Ivan Vendrov",
+    "publication": "Ivan Vendrov",
+    "year": 2023,
+    "url": "https://ivan.vendrov.io/posts/tyranny-of-the-marginal-user",
+    "minutes": 12,
+    "tags": [
+      "product",
+      "incentives",
+      "design"
+    ],
+    "blurb": "Why your favourite app keeps getting worse: growth metrics select for the person who churns over the person who cares. A diagnosis without a cure, which is honest.",
+    "first": "2023-11",
+    "last": "2026-07",
+    "n": 378
+  },
+  {
+    "title": "I Should Have Loved Biology",
+    "author": "James Somers",
+    "publication": "James Somers",
+    "year": 2015,
+    "url": "https://jsomers.net/i-should-have-loved-biology/",
+    "minutes": 10,
+    "tags": [
+      "science",
+      "education",
+      "writing"
+    ],
+    "blurb": "Somers on how textbooks kill the subject they are meant to teach. The best case for rewriting science pedagogy from first principles.",
+    "first": "2016-03",
+    "last": "2026-02",
+    "n": 512
+  },
+  {
+    "title": "You and Your Research",
+    "author": "Richard Hamming",
+    "publication": "Bell Labs",
+    "year": 1986,
+    "url": "https://www.cs.virginia.edu/~robins/YouAndYourResearch.html",
+    "minutes": 48,
+    "tags": [
+      "research",
+      "career",
+      "excellence"
+    ],
+    "blurb": "Hamming asking the room why they are not working on important problems — and meaning it. Still uncomfortable in the best way.",
+    "first": "2008-04",
+    "last": "2026-06",
+    "n": 756
+  },
+  {
+    "title": "A Big Little Idea Called Legibility",
+    "author": "Venkatesh Rao",
+    "publication": "Ribbonfarm",
+    "year": 2010,
+    "url": "https://www.ribbonfarm.com/2010/07/26/a-big-little-idea-called-legibility/",
+    "minutes": 22,
+    "tags": [
+      "systems",
+      "governance",
+      "complexity"
+    ],
+    "blurb": "Scott's monoculture, Le Corbusier's grid, and the urge to make the world readable to planners. The essay that launched a thousand critiques of optimisation.",
+    "first": "2011-06",
+    "last": "2026-05",
+    "n": 634
+  },
+  {
+    "title": "The Rise and Fall of Peer Review",
+    "author": "Adam Mastroianni",
+    "publication": "Experimental History",
+    "year": 2022,
+    "url": "https://www.experimental-history.com/p/the-rise-and-fall-of-peer-review",
+    "minutes": 16,
+    "tags": [
+      "science",
+      "institutions",
+      "research"
+    ],
+    "blurb": "Peer review was never the gold standard — it was a workaround that became sacred. Mastroianni makes the history funny and the implications hard to ignore.",
+    "first": "2022-08",
+    "last": "2026-07",
+    "n": 489
+  },
+  {
+    "title": "How Complex Systems Fail",
+    "author": "Richard Cook",
+    "publication": "Richard Cook",
+    "year": 2000,
+    "url": "https://how.complexsystems.fail/",
+    "minutes": 9,
+    "tags": [
+      "systems",
+      "safety",
+      "failure"
+    ],
+    "blurb": "Eighteen tight propositions on why accidents are normal, not anomalous. Required reading for anyone who builds things that can hurt people.",
+    "first": "2011-02",
+    "last": "2026-06",
+    "n": 567
+  },
+  {
+    "title": "The Copenhagen Interpretation of Ethics",
+    "author": "Jai Dhyani",
+    "publication": "Jaibot",
+    "year": 2016,
+    "url": "https://blog.jaibot.com/the-copenhagen-interpretation-of-ethics/",
+    "minutes": 6,
+    "tags": [
+      "ethics",
+      "action",
+      "philosophy"
+    ],
+    "blurb": "Once you engage with a problem, you become blameworthy for every part of it you fail to fix. A sharp coinage for a familiar trap.",
+    "first": "2017-04",
+    "last": "2026-03",
+    "n": 421
+  },
+  {
+    "title": "Slack",
+    "author": "Zvi Mowshowitz",
+    "publication": "Don't Worry About the Vase",
+    "year": 2017,
+    "url": "https://thezvi.wordpress.com/2017/09/15/slack/",
+    "minutes": 14,
+    "tags": [
+      "decision-making",
+      "planning",
+      "systems"
+    ],
+    "blurb": "The case for leaving room in systems — budgets, schedules, organisations — so they can absorb surprise. Efficiency has a hidden tax.",
+    "first": "2018-02",
+    "last": "2026-04",
+    "n": 356
+  },
+  {
+    "title": "Things You're Allowed to Do",
+    "author": "Milan Cvitkovic",
+    "publication": "Milan Cvitkovic",
+    "year": 2021,
+    "url": "https://milan.cvitkovic.net/writing/things_youre_allowed_to_do/",
+    "minutes": 13,
+    "tags": [
+      "agency",
+      "life",
+      "permission"
+    ],
+    "blurb": "A list of ordinary liberties people forget they have — calling the author, skipping the meeting, renegotiating the lease. Permission slips as genre.",
+    "first": "2021-11",
+    "last": "2026-06",
+    "n": 298
+  },
+  {
+    "title": "The Cook and the Chef",
+    "author": "Tim Urban",
+    "publication": "Wait But Why",
+    "year": 2015,
+    "url": "https://waitbutwhy.com/2015/11/the-cook-and-the-chef-musks-secret-sauce.html",
+    "minutes": 71,
+    "tags": [
+      "thinking",
+      "first-principles",
+      "innovation"
+    ],
+    "blurb": "Reasoning from first principles versus reasoning by analogy, told with stick figures and surprising teeth. Urban at his most useful.",
+    "first": "2016-01",
+    "last": "2026-01",
+    "n": 445
+  },
+  {
+    "title": "It's Time to Build",
+    "author": "Marc Andreessen",
+    "publication": "a16z",
+    "year": 2020,
+    "url": "https://a16z.com/its-time-to-build/",
+    "minutes": 12,
+    "tags": [
+      "building",
+      "policy",
+      "progress"
+    ],
+    "blurb": "A pandemic-era sermon on institutional sclerosis and the moral case for making things. Agree or not, it named a mood.",
+    "first": "2020-04",
+    "last": "2026-02",
+    "n": 534
+  },
+  {
+    "title": "Why We Stopped Making Einsteins",
+    "author": "Erik Hoel",
+    "publication": "The Intrinsic Perspective",
+    "year": 2022,
+    "url": "https://erikhoel.substack.com/p/why-we-stopped-making-einsteins",
+    "minutes": 26,
+    "tags": [
+      "genius",
+      "education",
+      "science"
+    ],
+    "blurb": "Hoel's case that the pipeline for eccentric brilliance has been dismantled by credentialism and narrow apprenticeship. Provocative even where you disagree.",
+    "first": "2022-11",
+    "last": "2026-05",
+    "n": 367
+  },
+  {
+    "title": "Why Books Don't Work",
+    "author": "Andy Matuschak",
+    "publication": "Andy Matuschak",
+    "year": 2019,
+    "url": "https://andymatuschak.org/books/",
+    "minutes": 15,
+    "tags": [
+      "learning",
+      "books",
+      "design"
+    ],
+    "blurb": "Books transfer words, not understanding — and the medium has never been designed to close that gap. A quiet challenge to how we read.",
+    "first": "2019-06",
+    "last": "2026-07",
+    "n": 478
+  },
+  {
+    "title": "Do Things That Don't Scale",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2013,
+    "url": "http://paulgraham.com/ds.html",
+    "minutes": 12,
+    "tags": [
+      "startups",
+      "growth",
+      "sales"
+    ],
+    "blurb": "The counterintuitive early playbook: do things manually, embarrassingly, one user at a time. The advice YC founders still quote.",
+    "first": "2010-04",
+    "last": "2026-01",
+    "n": 377
+  },
+  {
+    "title": "How to Make Wealth",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2004,
+    "url": "http://paulgraham.com/wealth.html",
+    "minutes": 22,
+    "tags": [
+      "startups",
+      "economics",
+      "work"
+    ],
+    "blurb": "Wealth is not money; it is stuff people want. Graham's clearest statement of what startups actually produce."
+  },
+  {
+    "title": "Startup = Growth",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2012,
+    "url": "http://paulgraham.com/growth.html",
+    "minutes": 10,
+    "tags": [
+      "startups",
+      "growth",
+      "definition"
+    ],
+    "blurb": "A startup is a company designed to grow fast — and that definition has consequences for everything else.",
+    "first": "2011-08",
+    "last": "2026-02",
+    "n": 233
+  },
+  {
+    "title": "How to Get Startup Ideas",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2012,
+    "url": "http://paulgraham.com/startupideas.html",
+    "minutes": 18,
+    "tags": [
+      "startups",
+      "ideas",
+      "founders"
+    ],
+    "blurb": "The best ideas look like toys and start as problems you have yourself. A field guide to not chasing fake opportunities.",
+    "first": "2012-02",
+    "last": "2026-02",
+    "n": 1076
+  },
+  {
+    "title": "Be Good",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2008,
+    "url": "http://paulgraham.com/good.html",
+    "minutes": 8,
+    "tags": [
+      "startups",
+      "ethics",
+      "culture"
+    ],
+    "blurb": "Why being good is not just moral but strategic — and how arseholes eventually tax themselves out of the network."
+  },
+  {
+    "title": "What You Can't Say",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2004,
+    "url": "http://paulgraham.com/say.html",
+    "minutes": 14,
+    "tags": [
+      "culture",
+      "ideas",
+      "conformity"
+    ],
+    "blurb": "Every era has opinions that cannot be stated without social cost. Finding them is a map to where thinking is stuck."
+  },
+  {
+    "title": "Hackers and Painters",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2004,
+    "url": "http://paulgraham.com/hp.html",
+    "minutes": 20,
+    "tags": [
+      "programming",
+      "art",
+      "making"
+    ],
+    "blurb": "What hackers and painters share: making things, taste, and the gap between what you imagined and what you built."
+  },
+  {
+    "title": "Cities and Ambition",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2008,
+    "url": "http://paulgraham.com/cities.html",
+    "minutes": 12,
+    "tags": [
+      "cities",
+      "ambition",
+      "culture"
+    ],
+    "blurb": "Different cities whisper different ambitions at you. A piece that explains why geography still matters for builders."
+  },
+  {
+    "title": "Why Nerds Are Unpopular",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2003,
+    "url": "http://paulgraham.com/nerds.html",
+    "minutes": 16,
+    "tags": [
+      "school",
+      "culture",
+      "growing-up"
+    ],
+    "blurb": "A theory of high-school status that doubles as a memoir of being the wrong kind of clever in the wrong place."
+  },
+  {
+    "title": "Life is Short",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2016,
+    "url": "http://paulgraham.com/vb.html",
+    "minutes": 8,
+    "tags": [
+      "life",
+      "time",
+      "priorities"
+    ],
+    "blurb": "Bullshit is the thing that expands to fill the time you forget is finite. Short enough to reread annually."
+  },
+  {
+    "title": "How to Think for Yourself",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2020,
+    "url": "http://paulgraham.com/think.html",
+    "minutes": 14,
+    "tags": [
+      "thinking",
+      "independence",
+      "culture"
+    ],
+    "blurb": "Independent-mindedness is not innate — it is a set of habits you can steal from people who have them."
+  },
+  {
+    "title": "Keep Your Identity Small",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2009,
+    "url": "http://paulgraham.com/identity.html",
+    "minutes": 6,
+    "tags": [
+      "identity",
+      "debate",
+      "politics"
+    ],
+    "blurb": "The more labels you wear, the harder it is to change your mind. A one-sentence test for intellectual stuckness.",
+    "first": "2009-04",
+    "last": "2025-01",
+    "n": 716
+  },
+  {
+    "title": "The Bus Ticket Theory of Genius",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2019,
+    "url": "http://paulgraham.com/genius.html",
+    "minutes": 12,
+    "tags": [
+      "genius",
+      "work",
+      "obsession"
+    ],
+    "blurb": "Maybe genius is mostly obsessive interest applied over time, not a lottery ticket you are born holding."
+  },
+  {
+    "title": "Schlep Blindness",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2012,
+    "url": "http://paulgraham.com/schlep.html",
+    "minutes": 7,
+    "tags": [
+      "startups",
+      "opportunity",
+      "work"
+    ],
+    "blurb": "The best opportunities hide behind tedious, unglamorous work everyone else avoids. You cannot see them until you look."
+  },
+  {
+    "title": "How to Disagree",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2008,
+    "url": "http://paulgraham.com/disagree.html",
+    "minutes": 6,
+    "tags": [
+      "debate",
+      "writing",
+      "argument"
+    ],
+    "blurb": "A hierarchy of disagreement that turns Twitter fights into a taxonomy. Still the best reply to bad-faith dunking.",
+    "first": "2008-02",
+    "last": "2026-05",
+    "n": 358
+  },
+  {
+    "title": "The Age of the Essay",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2004,
+    "url": "http://paulgraham.com/essay.html",
+    "minutes": 10,
+    "tags": [
+      "writing",
+      "essays",
+      "education"
+    ],
+    "blurb": "Essays are how you figure things out, not just report what you know. A manifesto for the form this app is built on."
+  },
+  {
+    "title": "What I Worked On",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2021,
+    "url": "http://paulgraham.com/worked.html",
+    "minutes": 45,
+    "tags": [
+      "memoir",
+      "startups",
+      "career"
+    ],
+    "blurb": "Graham's autobiography in essay form — Lisp, Viaweb, YC, Hacker News. The through-line is curiosity with deadlines.",
+    "first": "2020-05",
+    "last": "2025-12",
+    "n": 261
+  },
+  {
+    "title": "Default Alive or Default Dead",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2015,
+    "url": "http://paulgraham.com/aord.html",
+    "minutes": 8,
+    "tags": [
+      "startups",
+      "finance",
+      "survival"
+    ],
+    "blurb": "Two questions that cut through startup delusion: are you default alive or default dead, and do you know which?",
+    "first": "2012-01",
+    "last": "2026-03",
+    "n": 971
+  },
+  {
+    "title": "Mean People Fail",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2014,
+    "url": "http://paulgraham.com/mean.html",
+    "minutes": 7,
+    "tags": [
+      "culture",
+      "startups",
+      "character"
+    ],
+    "blurb": "Meanness is not strength; it is a tax on cooperation that compounds. A note to founders who confuse fear with respect.",
+    "first": "2013-09",
+    "last": "2026-01",
+    "n": 703
+  },
+  {
+    "title": "Writing, Briefly",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2005,
+    "url": "http://paulgraham.com/writing44.html",
+    "minutes": 5,
+    "tags": [
+      "writing",
+      "craft",
+      "clarity"
+    ],
+    "blurb": "Write simply, revise brutally, read aloud. Graham's compressed guide to prose that does not waste the reader's time.",
+    "first": "2008-01",
+    "last": "2025-10",
+    "n": 1016
+  },
+  {
+    "title": "The Refragmentation",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2016,
+    "url": "http://paulgraham.com/re.html",
+    "minutes": 18,
+    "tags": [
+      "society",
+      "history",
+      "inequality"
+    ],
+    "blurb": "America was more equal when it was more uniform — and the unraveling of that uniformity has complicated politics ever since."
+  },
+  {
+    "title": "Having Kids",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2021,
+    "url": "http://paulgraham.com/kids.html",
+    "minutes": 10,
+    "tags": [
+      "parenting",
+      "life",
+      "time"
+    ],
+    "blurb": "Honest and unsentimental notes on what children cost and what they give back. Rare in the genre."
+  },
+  {
+    "title": "What Doesn't Seem Like Work",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2010,
+    "url": "http://paulgraham.com/work.html",
+    "minutes": 6,
+    "tags": [
+      "work",
+      "passion",
+      "career"
+    ],
+    "blurb": "The thing that feels like play to you and work to others is probably your comparative advantage. Find it early."
+  },
+  {
+    "title": "General and Surprising",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2017,
+    "url": "http://paulgraham.com/sun.html",
+    "minutes": 8,
+    "tags": [
+      "ideas",
+      "startups",
+      "insight"
+    ],
+    "blurb": "Good startup ideas are general enough to grow and surprising enough that most people dismiss them at first."
+  },
+  {
+    "title": "The Top Idea in Your Mind",
+    "author": "Paul Graham",
+    "publication": "Paul Graham",
+    "year": 2010,
+    "url": "http://paulgraham.com/top.html",
+    "minutes": 6,
+    "tags": [
+      "focus",
+      "thinking",
+      "attention"
+    ],
+    "blurb": "Whatever sits at the top of your mental stack drives outcomes more than you notice. Guard that slot carefully."
+  },
+  {
+    "title": "I Can Tolerate Anything Except the Outgroup",
+    "author": "Scott Alexander",
+    "publication": "Slate Star Codex",
+    "year": 2014,
+    "url": "https://slatestarcodex.com/2014/09/30/i-can-tolerate-anything-except-the-outgroup/",
+    "minutes": 18,
+    "tags": [
+      "politics",
+      "tribalism",
+      "psychology"
+    ],
+    "blurb": "Tolerance is easy toward people who agree with you on the important thing — which is usually not the stated thing.",
+    "first": "2011-11",
+    "last": "2026-03",
+    "n": 96
+  },
+  {
+    "title": "Beware the Man of One Study",
+    "author": "Scott Alexander",
+    "publication": "Slate Star Codex",
+    "year": 2014,
+    "url": "https://slatestarcodex.com/2014/04/28/beware-the-man-of-one-study/",
+    "minutes": 8,
+    "tags": [
+      "science",
+      "statistics",
+      "debate"
+    ],
+    "blurb": "One paper is a hint, not a worldview. The essay that should be stapled to every hot take citing a single RCT."
+  },
+  {
+    "title": "The Control Group Is Out Of Control",
+    "author": "Scott Alexander",
+    "publication": "Slate Star Codex",
+    "year": 2014,
+    "url": "https://slatestarcodex.com/2014/04/28/the-control-group-is-out-of-control/",
+    "minutes": 22,
+    "tags": [
+      "science",
+      "parapsychology",
+      "methodology"
+    ],
+    "blurb": "When the control group performs miracles, maybe your model of evidence needs updating. Weird, funny, and unsettling."
+  },
+  {
+    "title": "Who By Very Slow Decay",
+    "author": "Scott Alexander",
+    "publication": "Slate Star Codex",
+    "year": 2013,
+    "url": "https://slatestarcodex.com/2013/07/17/who-by-very-slow-decay/",
+    "minutes": 14,
+    "tags": [
+      "medicine",
+      "ethics",
+      "aging"
+    ],
+    "blurb": "A harrowing tour of end-of-life care that makes the abstract debate about death panels unbearably concrete."
+  },
+  {
+    "title": "Considerations on Cost Disease",
+    "author": "Scott Alexander",
+    "publication": "Slate Star Codex",
+    "year": 2017,
+    "url": "https://slatestarcodex.com/2017/02/09/considerations-on-cost-disease/",
+    "minutes": 28,
+    "tags": [
+      "economics",
+      "policy",
+      "institutions"
+    ],
+    "blurb": "Why does everything — healthcare, education, housing — cost more while TVs get cheaper? A patient survey of the suspects."
+  },
+  {
+    "title": "The Categories Were Made For Man, Not Man For The Categories",
+    "author": "Scott Alexander",
+    "publication": "Slate Star Codex",
+    "year": 2014,
+    "url": "https://slatestarcodex.com/2014/11/21/the-categories-were-made-for-man-not-man-for-the-categories/",
+    "minutes": 16,
+    "tags": [
+      "philosophy",
+      "categories",
+      "trans"
+    ],
+    "blurb": "When reality outruns the labels, do you fix the labels or punish the reality? A parable about classification and compassion.",
+    "first": "2013-01",
+    "last": "2026-01",
+    "n": 420
+  },
+  {
+    "title": "Against Individual IQ Worries",
+    "author": "Scott Alexander",
+    "publication": "Slate Star Codex",
+    "year": 2017,
+    "url": "https://slatestarcodex.com/2017/03/27/against-individual-iq-worry/",
+    "minutes": 12,
+    "tags": [
+      "intelligence",
+      "psychology",
+      "debate"
+    ],
+    "blurb": "Obsessing over your own IQ is both pointless and corrosive. A permission slip to stop ranking yourself on the wrong axis."
+  },
+  {
+    "title": "Radicalizing the Romanceless",
+    "author": "Scott Alexander",
+    "publication": "Slate Star Codex",
+    "year": 2016,
+    "url": "https://slatestarcodex.com/2016/08/31/radicalizing-the-romanceless/",
+    "minutes": 20,
+    "tags": [
+      "culture",
+      "gender",
+      "politics"
+    ],
+    "blurb": "A uncomfortable map of how chronic rejection can slide into ideology. Whether you buy the frame, the mechanism is worth understanding.",
+    "first": "2014-10",
+    "last": "2026-05",
+    "n": 56
+  },
+  {
+    "title": "The Tails Coming Apart As Metaphor For Life",
+    "author": "Scott Alexander",
+    "publication": "Slate Star Codex",
+    "year": 2017,
+    "url": "https://slatestarcodex.com/2017/05/08/the-tails-coming-apart-as-metaphor-for-life/",
+    "minutes": 10,
+    "tags": [
+      "statistics",
+      "metaphor",
+      "culture"
+    ],
+    "blurb": "When two things correlate in the middle but diverge at the extremes, arguments that conflate them fall apart. A statistical fable."
+  },
+  {
+    "title": "The Goddess of Everything Else",
+    "author": "Scott Alexander",
+    "publication": "Slate Star Codex",
+    "year": 2015,
+    "url": "https://slatestarcodex.com/2015/04/21/the-goddess-of-everything-else/",
+    "minutes": 12,
+    "tags": [
+      "fiction",
+      "coordination",
+      "philosophy"
+    ],
+    "blurb": "A parable about Moloch's opposite — the god of everything sacrificed to win one thing. Strange and oddly moving."
+  },
+  {
+    "title": "Book Review: Twelve Rules For Life",
+    "author": "Scott Alexander",
+    "publication": "Slate Star Codex",
+    "year": 2018,
+    "url": "https://slatestarcodex.com/2018/03/19/book-review-twelve-rules-for-life/",
+    "minutes": 24,
+    "tags": [
+      "review",
+      "psychology",
+      "culture"
+    ],
+    "blurb": "The Peterson review everyone argued about — fair where it should be, sharp where it needs to be, funny throughout."
+  },
+  {
+    "title": "How The West Was Won",
+    "author": "Scott Alexander",
+    "publication": "Slate Star Codex",
+    "year": 2013,
+    "url": "https://slatestarcodex.com/2013/04/15/how-the-west-was-won/",
+    "minutes": 14,
+    "tags": [
+      "history",
+      "progress",
+      "culture"
+    ],
+    "blurb": "A case that the modern world is weirdly, specifically good — and that pretending otherwise wastes the advantage.",
+    "first": "2013-01",
+    "last": "2026-05",
+    "n": 70
+  },
+  {
+    "title": "Against Murderism",
+    "author": "Scott Alexander",
+    "publication": "Slate Star Codex",
+    "year": 2017,
+    "url": "https://slatestarcodex.com/2017/06/21/against-murderism/",
+    "minutes": 10,
+    "tags": [
+      "language",
+      "politics",
+      "morality"
+    ],
+    "blurb": "If you expand a word until it covers everyone you dislike, it stops doing moral work. A plea for narrower definitions."
+  },
+  {
+    "title": "The Non-Libertarian FAQ",
+    "author": "Scott Alexander",
+    "publication": "Slate Star Codex",
+    "year": 2013,
+    "url": "https://slatestarcodex.com/2013/02/17/the-non-libertarian-faq-3-0-75/",
+    "minutes": 35,
+    "tags": [
+      "politics",
+      "economics",
+      "philosophy"
+    ],
+    "blurb": "Steel-man objections to libertarianism without the usual bad faith. Long, but it earns trust by arguing fairly.",
+    "first": "2012-10",
+    "last": "2025-01",
+    "n": 185
+  },
+  {
+    "title": "Untitled",
+    "author": "Scott Alexander",
+    "publication": "Slate Star Codex",
+    "year": 2014,
+    "url": "https://slatestarcodex.com/2014/06/07/untitled/",
+    "minutes": 8,
+    "tags": [
+      "psychology",
+      "culture",
+      "identity"
+    ],
+    "blurb": "On the gap between the person you perform and the person you are. Short, oblique, and stuck in memory."
+  },
+  {
+    "title": "Social Criticism As Esoteric Skill",
+    "author": "Scott Alexander",
+    "publication": "Astral Codex Ten",
+    "year": 2021,
+    "url": "https://www.astralcodexten.com/p/social-criticism-as-esoteric-skill",
+    "minutes": 14,
+    "tags": [
+      "culture",
+      "criticism",
+      "media"
+    ],
+    "blurb": "Complaining well is a craft most people never learn — and bad social criticism has predictable failure modes."
+  },
+  {
+    "title": "What Developmental Milestones Are You Missing?",
+    "author": "Scott Alexander",
+    "publication": "Slate Star Codex",
+    "year": 2019,
+    "url": "https://slatestarcodex.com/2019/06/05/what-developmental-milestones-are-you-missing/",
+    "minutes": 12,
+    "tags": [
+      "psychology",
+      "childhood",
+      "culture"
+    ],
+    "blurb": "Childhood used to teach skills adults now lack — and the absence shows up in politics, work, and relationships."
+  },
+  {
+    "title": "The Gervais Principle",
+    "author": "Venkatesh Rao",
+    "publication": "Ribbonfarm",
+    "year": 2009,
+    "url": "https://www.ribbonfarm.com/2009/10/07/the-gervais-principle-or-the-office-according-to-the-office/",
+    "minutes": 45,
+    "tags": [
+      "work",
+      "organizations",
+      "culture"
+    ],
+    "blurb": "The Office as org-chart ethnography: sociopaths, clueless, and losers in a theory too honest for HR.",
+    "first": "2009-09",
+    "last": "2025-05",
+    "n": 1034
+  },
+  {
+    "title": "Welcome to the Future Nauseous",
+    "author": "Venkatesh Rao",
+    "publication": "Ribbonfarm",
+    "year": 2011,
+    "url": "https://www.ribbonfarm.com/2011/09/16/welcome-to-the-future-nauseous/",
+    "minutes": 18,
+    "tags": [
+      "future",
+      "technology",
+      "culture"
+    ],
+    "blurb": "We can only inhabit the future in small doses before nausea sets in. Why most 'visionary' talk fails the stomach test.",
+    "first": "2010-07",
+    "last": "2025-05",
+    "n": 987
+  },
+  {
+    "title": "The American Cloud",
+    "author": "Venkatesh Rao",
+    "publication": "Ribbonfarm",
+    "year": 2013,
+    "url": "https://www.ribbonfarm.com/2013/07/25/the-american-cloud/",
+    "minutes": 16,
+    "tags": [
+      "infrastructure",
+      "technology",
+      "politics"
+    ],
+    "blurb": "Data centers as sovereign islands in the American landscape — a travelogue of where the cloud actually lives.",
+    "first": "2012-05",
+    "last": "2026-07",
+    "n": 906
+  },
+  {
+    "title": "A Brief History of the Corporation: 1600 to 2100",
+    "author": "Venkatesh Rao",
+    "publication": "Ribbonfarm",
+    "year": 2011,
+    "url": "https://www.ribbonfarm.com/2011/06/08/a-brief-history-of-the-corporation-1600-to-2100/",
+    "minutes": 20,
+    "tags": [
+      "business",
+      "history",
+      "institutions"
+    ],
+    "blurb": "The corporation as a time-bounded technology, not a permanent fixture. Speculative history that clarifies the present."
+  },
+  {
+    "title": "The Premium Mediocre Life of Maya Millennial",
+    "author": "Venkatesh Rao",
+    "publication": "Ribbonfarm",
+    "year": 2017,
+    "url": "https://www.ribbonfarm.com/2017/08/17/the-premium-mediocre-life-of-maya-millennial/",
+    "minutes": 14,
+    "tags": [
+      "culture",
+      "consumption",
+      "millennials"
+    ],
+    "blurb": "Premium mediocre: the aesthetic of seeming affluent while renting everything. A coinage that spread because it was true."
+  },
+  {
+    "title": "The Calculus of Grit",
+    "author": "Venkatesh Rao",
+    "publication": "Ribbonfarm",
+    "year": 2016,
+    "url": "https://www.ribbonfarm.com/2016/02/11/the-calculus-of-grit/",
+    "minutes": 12,
+    "tags": [
+      "work",
+      "strategy",
+      "persistence"
+    ],
+    "blurb": "Grit is not blind persistence — it is knowing which failures to absorb and which to abandon. A more adult version of the virtue."
+  },
+  {
+    "title": "The Extended Brain Hypothesis",
+    "author": "Venkatesh Rao",
+    "publication": "Ribbonfarm",
+    "year": 2020,
+    "url": "https://www.ribbonfarm.com/2020/05/21/the-extended-brain-hypothesis/",
+    "minutes": 16,
+    "tags": [
+      "tools",
+      "thinking",
+      "technology"
+    ],
+    "blurb": "Your brain was never just in your skull; tools extend cognition. A frame for understanding note-taking and AI assistants alike."
+  },
+  {
+    "title": "Be Slightly Evil",
+    "author": "Venkatesh Rao",
+    "publication": "Ribbonfarm",
+    "year": 2011,
+    "url": "https://www.ribbonfarm.com/2011/08/05/be-slightly-evil/",
+    "minutes": 10,
+    "tags": [
+      "strategy",
+      "organizations",
+      "power"
+    ],
+    "blurb": "Not cartoon villainy — just enough willingness to play the game that nice people pretend does not exist.",
+    "first": "2008-08",
+    "last": "2026-01",
+    "n": 241
+  },
+  {
+    "title": "The Streetlight Effect",
+    "author": "Venkatesh Rao",
+    "publication": "Ribbonfarm",
+    "year": 2012,
+    "url": "https://www.ribbonfarm.com/2012/06/01/the-streetlight-effect/",
+    "minutes": 8,
+    "tags": [
+      "research",
+      "bias",
+      "methodology"
+    ],
+    "blurb": "You search where the light is, not where you lost the keys. A parable about metrics and misplaced rigor."
+  },
+  {
+    "title": "The Art of Gig",
+    "author": "Venkatesh Rao",
+    "publication": "Ribbonfarm",
+    "year": 2017,
+    "url": "https://www.ribbonfarm.com/2017/09/19/the-art-of-gig/",
+    "minutes": 14,
+    "tags": [
+      "work",
+      "freelancing",
+      "career"
+    ],
+    "blurb": "The gig economy as a design problem for individual operators — not just a labour-market trend to lament."
+  },
+  {
+    "title": "Timing Technology",
+    "author": "Gwern Branwen",
+    "publication": "Gwern.net",
+    "year": 2011,
+    "url": "https://www.gwern.net/Timing",
+    "minutes": 35,
+    "tags": [
+      "technology",
+      "forecasting",
+      "history"
+    ],
+    "blurb": "When will a technology actually matter? Gwern's methodical answer to a question everyone guesses at badly.",
+    "first": "2011-12",
+    "last": "2026-07",
+    "n": 181
+  },
+  {
+    "title": "The Melancholy of Subculture Society",
+    "author": "Gwern Branwen",
+    "publication": "Gwern.net",
+    "year": 2016,
+    "url": "https://www.gwern.net/Subculture",
+    "minutes": 18,
+    "tags": [
+      "internet",
+      "culture",
+      "community"
+    ],
+    "blurb": "Subcultures were supposed to save us from mass culture. Instead they became another thing to consume and leave.",
+    "first": "2014-11",
+    "last": "2025-03",
+    "n": 581
+  },
+  {
+    "title": "Silk Road 1",
+    "author": "Gwern Branwen",
+    "publication": "Gwern.net",
+    "year": 2015,
+    "url": "https://www.gwern.net/Silk-Road",
+    "minutes": 40,
+    "tags": [
+      "crypto",
+      "crime",
+      "research"
+    ],
+    "blurb": "An archival deep dive into the first darknet market — part true crime, part lesson in how online communities evolve.",
+    "first": "2014-09",
+    "last": "2025-06",
+    "n": 1171
+  },
+  {
+    "title": "Spaced Repetition",
+    "author": "Gwern Branwen",
+    "publication": "Gwern.net",
+    "year": 2009,
+    "url": "https://www.gwern.net/Spaced-repetition",
+    "minutes": 25,
+    "tags": [
+      "learning",
+      "memory",
+      "tools"
+    ],
+    "blurb": "The most evidence-backed study hack, explained with Gwern's usual obsessive completeness. Long, but it replaces a dozen shorter posts."
+  },
+  {
+    "title": "Claude Shannon",
+    "author": "Gwern Branwen",
+    "publication": "Gwern.net",
+    "year": 2018,
+    "url": "https://www.gwern.net/Shannon",
+    "minutes": 30,
+    "tags": [
+      "biography",
+      "information",
+      "genius"
+    ],
+    "blurb": "Shannon as he actually worked: playful, restless, and uninterested in fame. A portrait of a mind that invented a field then wandered off."
+  },
+  {
+    "title": "On Seeing Everything",
+    "author": "Gwern Branwen",
+    "publication": "Gwern.net",
+    "year": 2020,
+    "url": "https://www.gwern.net/Seeing-Everything",
+    "minutes": 12,
+    "tags": [
+      "media",
+      "internet",
+      "attention"
+    ],
+    "blurb": "What happens when nothing is scarce except attention and everything is archived forever."
+  },
+  {
+    "title": "Open Questions",
+    "author": "Gwern Branwen",
+    "publication": "Gwern.net",
+    "year": 2019,
+    "url": "https://www.gwern.net/Open-questions",
+    "minutes": 15,
+    "tags": [
+      "research",
+      "questions",
+      "science"
+    ],
+    "blurb": "A living list of questions Gwern wishes someone would answer. Reading it makes your own curiosity feel underemployed."
+  },
+  {
+    "title": "Blackmail",
+    "author": "Gwern Branwen",
+    "publication": "Gwern.net",
+    "year": 2014,
+    "url": "https://www.gwern.net/Blackmail",
+    "minutes": 20,
+    "tags": [
+      "economics",
+      "crypto",
+      "mechanism-design"
+    ],
+    "blurb": "Blackmail as a weird corner of mechanism design — morally fraught, economically fascinating, thoroughly Gwern."
+  },
+  {
+    "title": "Modafinil",
+    "author": "Gwern Branwen",
+    "publication": "Gwern.net",
+    "year": 2013,
+    "url": "https://www.gwern.net/Modafinil",
+    "minutes": 18,
+    "tags": [
+      "nootropics",
+      "self-experiment",
+      "health"
+    ],
+    "blurb": "Self-experimentation as epistemology: one person's years-long trial of a cognitive enhancer, reported with uncomfortable honesty.",
+    "first": "2011-05",
+    "last": "2025-08",
+    "n": 1152
+  },
+  {
+    "title": "Bitcoin Is Worse Is Better",
+    "author": "Gwern Branwen",
+    "publication": "Gwern.net",
+    "year": 2011,
+    "url": "https://www.gwern.net/Bitcoin-is-Worse-is-Better",
+    "minutes": 12,
+    "tags": [
+      "crypto",
+      "design",
+      "technology"
+    ],
+    "blurb": "Why the ugly, limited version of a technology sometimes wins. Bitcoin through the lens of Gabriel's Worse is Better.",
+    "first": "2011-11",
+    "last": "2025-07",
+    "n": 712
+  },
+  {
+    "title": "Computer latency: 1977-2017",
+    "author": "Dan Luu",
+    "publication": "Dan Luu",
+    "year": 2017,
+    "url": "https://danluu.com/computer-latency/",
+    "minutes": 10,
+    "tags": [
+      "computers",
+      "performance",
+      "history"
+    ],
+    "blurb": "Your phone is slower than a thirty-year-old workstation at some tasks. A benchmark that shames the industry."
+  },
+  {
+    "title": "Why hardware development is hard",
+    "author": "Dan Luu",
+    "publication": "Dan Luu",
+    "year": 2018,
+    "url": "https://danluu.com/hardware-easy/",
+    "minutes": 14,
+    "tags": [
+      "hardware",
+      "engineering",
+      "complexity"
+    ],
+    "blurb": "Hardware looks easy until you try to ship it. Luu on iteration cycles, tooling gaps, and why software people underestimate the field.",
+    "first": "2016-07",
+    "last": "2026-06",
+    "n": 1178
+  },
+  {
+    "title": "Web bloat",
+    "author": "Dan Luu",
+    "publication": "Dan Luu",
+    "year": 2015,
+    "url": "https://danluu.com/web-bloat/",
+    "minutes": 8,
+    "tags": [
+      "web",
+      "performance",
+      "design"
+    ],
+    "blurb": "Today's web pages are megabytes to show a paragraph. A side-by-side that makes the bloat impossible to unsee.",
+    "first": "2013-01",
+    "last": "2025-06",
+    "n": 307
+  },
+  {
+    "title": "How I learned to program",
+    "author": "Dan Luu",
+    "publication": "Dan Luu",
+    "year": 2016,
+    "url": "https://danluu.com/learning-to-program/",
+    "minutes": 12,
+    "tags": [
+      "programming",
+      "learning",
+      "career"
+    ],
+    "blurb": "No bootcamp fairy tale — just what actually worked and what wasted time. Refreshingly unsentimental.",
+    "first": "2016-03",
+    "last": "2026-03",
+    "n": 883
+  },
+  {
+    "title": "Normalization of deviance",
+    "author": "Dan Luu",
+    "publication": "Dan Luu",
+    "year": 2018,
+    "url": "https://danluu.com/denormalize/",
+    "minutes": 10,
+    "tags": [
+      "safety",
+      "organizations",
+      "failure"
+    ],
+    "blurb": "How teams learn to accept broken norms until disaster snaps them back. The Challenger essay for software and ops.",
+    "first": "2017-07",
+    "last": "2025-01",
+    "n": 671
+  },
+  {
+    "title": "Keyboard latency",
+    "author": "Dan Luu",
+    "publication": "Dan Luu",
+    "year": 2017,
+    "url": "https://danluu.com/keyboard-latency/",
+    "minutes": 8,
+    "tags": [
+      "hardware",
+      "performance",
+      "craft"
+    ],
+    "blurb": "You can feel lag you cannot measure until someone measures it for you. A case study in hidden friction.",
+    "first": "2014-09",
+    "last": "2025-02",
+    "n": 194
+  },
+  {
+    "title": "Is dev compensation bimodal?",
+    "author": "Dan Luu",
+    "publication": "Dan Luu",
+    "year": 2017,
+    "url": "https://danluu.com/bimodal-comp/",
+    "minutes": 10,
+    "tags": [
+      "career",
+      "compensation",
+      "tech"
+    ],
+    "blurb": "The claim that developer pay splits into two humps is mostly a statistical artefact. Luu punctures a popular anxiety."
+  },
+  {
+    "title": "How web bloat affects users with slow devices",
+    "author": "Dan Luu",
+    "publication": "Dan Luu",
+    "year": 2016,
+    "url": "https://danluu.com/fast-computer-slow-phone/",
+    "minutes": 8,
+    "tags": [
+      "web",
+      "accessibility",
+      "performance"
+    ],
+    "blurb": "Fast laptops hide the cost of bloated sites; slow phones pay it. A reminder that your users are not your machine.",
+    "first": "2013-02",
+    "last": "2026-02",
+    "n": 121
+  },
+  {
+    "title": "Programming languages as part of a system stack",
+    "author": "Dan Luu",
+    "publication": "Dan Luu",
+    "year": 2019,
+    "url": "https://danluu.com/language-performance/",
+    "minutes": 12,
+    "tags": [
+      "programming",
+      "systems",
+      "performance"
+    ],
+    "blurb": "Language speed matters less than where the language sits in the stack — until suddenly it matters enormously."
+  },
+  {
+    "title": "Why's that company so big?",
+    "author": "Dan Luu",
+    "publication": "Dan Luu",
+    "year": 2018,
+    "url": "https://danluu.com/whys-that-company-so-big/",
+    "minutes": 10,
+    "tags": [
+      "business",
+      "scale",
+      "strategy"
+    ],
+    "blurb": "Size is not always moat — sometimes it is legacy, regulation, or inertia. A short checklist for scepticism."
+  },
+  {
+    "title": "Status as a Service",
+    "author": "Eugene Wei",
+    "publication": "Eugene Wei",
+    "year": 2019,
+    "url": "https://www.eugenewei.com/blog/2019/2/19/status-as-a-service",
+    "minutes": 28,
+    "tags": [
+      "social",
+      "product",
+      "status"
+    ],
+    "blurb": "Social networks sell status the way games sell points — and the token economics explain more than the feature lists."
+  },
+  {
+    "title": "Invisible Asymptotes",
+    "author": "Eugene Wei",
+    "publication": "Eugene Wei",
+    "year": 2018,
+    "url": "https://www.eugenewei.com/blog/2018/5/21/invisible-asymptotes",
+    "minutes": 22,
+    "tags": [
+      "product",
+      "growth",
+      "strategy"
+    ],
+    "blurb": "Every product hits a ceiling it cannot see until it hits it. Wei on Amazon, Facebook, and the limits that hide in plain sight."
+  },
+  {
+    "title": "Amazon's Flywheel",
+    "author": "Eugene Wei",
+    "publication": "Eugene Wei",
+    "year": 2018,
+    "url": "https://www.eugenewei.com/blog/2018/10/04/amazon-flywheel/",
+    "minutes": 14,
+    "tags": [
+      "amazon",
+      "strategy",
+      "business"
+    ],
+    "blurb": "The flywheel metaphor done properly — not as diagram decoration but as an operating logic you can test against.",
+    "first": "2015-06",
+    "last": "2025-01",
+    "n": 978
+  },
+  {
+    "title": "Seeing Like an Algorithm",
+    "author": "Eugene Wei",
+    "publication": "Eugene Wei",
+    "year": 2020,
+    "url": "https://www.eugenewei.com/blog/2020/7/1/seeing-like-an-algorithm",
+    "minutes": 18,
+    "tags": [
+      "algorithms",
+      "culture",
+      "platforms"
+    ],
+    "blurb": "Algorithms do not see what humans see — they see proxies, and people learn to perform the proxies. Scott applied to feeds."
+  },
+  {
+    "title": "American Idle",
+    "author": "Eugene Wei",
+    "publication": "Eugene Wei",
+    "year": 2020,
+    "url": "https://www.eugenewei.com/blog/2020/8/18/american-idle",
+    "minutes": 16,
+    "tags": [
+      "labor",
+      "economics",
+      "future"
+    ],
+    "blurb": "On unemployment, stimulus, and what 'idle' means in an economy that measures the wrong things.",
+    "first": "2017-03",
+    "last": "2025-05",
+    "n": 485
+  },
+  {
+    "title": "Compress to Impress",
+    "author": "Eugene Wei",
+    "publication": "Eugene Wei",
+    "year": 2021,
+    "url": "https://www.eugenewei.com/blog/2021/3/23/compress-to-impress",
+    "minutes": 12,
+    "tags": [
+      "media",
+      "video",
+      "attention"
+    ],
+    "blurb": "TikTok's compression of story into seconds is not dumbing down — it is a new grammar of impressing quickly."
+  },
+  {
+    "title": "The TikTok Strategy",
+    "author": "Eugene Wei",
+    "publication": "Eugene Wei",
+    "year": 2020,
+    "url": "https://www.eugenewei.com/blog/2020/9/22/the-tiktok-strategy",
+    "minutes": 20,
+    "tags": [
+      "tiktok",
+      "product",
+      "growth"
+    ],
+    "blurb": "How recommendation-first feeds change what gets made. The essay that made product people take TikTok seriously.",
+    "first": "2017-01",
+    "last": "2025-06",
+    "n": 669
+  },
+  {
+    "title": "Aggregation Theory",
+    "author": "Ben Thompson",
+    "publication": "Stratechery",
+    "year": 2015,
+    "url": "https://stratechery.com/2015/aggregation-theory/",
+    "minutes": 18,
+    "tags": [
+      "platforms",
+      "strategy",
+      "internet"
+    ],
+    "blurb": "The lens for understanding Google, Facebook, and Netflix: aggregate demand, own the customer, dictate terms to suppliers."
+  },
+  {
+    "title": "The End of the Beginning",
+    "author": "Ben Thompson",
+    "publication": "Stratechery",
+    "year": 2020,
+    "url": "https://stratechery.com/2020/the-end-of-the-beginning/",
+    "minutes": 16,
+    "tags": [
+      "tech",
+      "history",
+      "strategy"
+    ],
+    "blurb": "The consumer internet's growth phase is over; what comes next is harder and weirder. Thompson's era-defining piece."
+  },
+  {
+    "title": "Defining Aggregators",
+    "author": "Ben Thompson",
+    "publication": "Stratechery",
+    "year": 2017,
+    "url": "https://stratechery.com/2017/defining-aggregators/",
+    "minutes": 14,
+    "tags": [
+      "platforms",
+      "definition",
+      "strategy"
+    ],
+    "blurb": "Not every big tech company is an aggregator — and mislabeling them sends you to the wrong playbook."
+  },
+  {
+    "title": "The Great Unbundling",
+    "author": "Ben Thompson",
+    "publication": "Stratechery",
+    "year": 2017,
+    "url": "https://stratechery.com/2017/the-great-unbundling/",
+    "minutes": 12,
+    "tags": [
+      "media",
+      "internet",
+      "business"
+    ],
+    "blurb": "Newspapers sold a bundle; the internet unbundled it and kept the profitable parts. A post-mortem still relevant."
+  },
+  {
+    "title": "Tech's Two Philosophies",
+    "author": "Ben Thompson",
+    "publication": "Stratechery",
+    "year": 2019,
+    "url": "https://stratechery.com/2019/techs-two-philosophies/",
+    "minutes": 14,
+    "tags": [
+      "tech",
+      "philosophy",
+      "culture"
+    ],
+    "blurb": "Apple's humanism versus Google's utilitarianism — a split that explains product choices better than specs do.",
+    "first": "2018-11",
+    "last": "2026-07",
+    "n": 580
+  },
+  {
+    "title": "The Super-Aggregators",
+    "author": "Ben Thompson",
+    "publication": "Stratechery",
+    "year": 2017,
+    "url": "https://stratechery.com/2017/the-super-aggregators/",
+    "minutes": 10,
+    "tags": [
+      "platforms",
+      "advertising",
+      "scale"
+    ],
+    "blurb": "When an aggregator aggregates aggregators, regulation gets hard and competition gets weird."
+  },
+  {
+    "title": "The Internet and the Third Estate",
+    "author": "Ben Thompson",
+    "publication": "Stratechery",
+    "year": 2019,
+    "url": "https://stratechery.com/2019/the-internet-and-the-third-estate/",
+    "minutes": 16,
+    "tags": [
+      "media",
+      "politics",
+      "internet"
+    ],
+    "blurb": "From printing press to podcast: every revolution in distribution reshapes who gets to speak and who must listen."
+  },
+  {
+    "title": "The Amazon Tax",
+    "author": "Ben Thompson",
+    "publication": "Stratechery",
+    "year": 2016,
+    "url": "https://stratechery.com/2016/the-amazon-tax/",
+    "minutes": 12,
+    "tags": [
+      "amazon",
+      "cloud",
+      "strategy"
+    ],
+    "blurb": "AWS as tax on the internet economy — and the strategic moat that funds everything else Amazon tries."
+  },
+  {
+    "title": "Newspapers and Thinking the Unthinkable",
+    "author": "Clay Shirky",
+    "publication": "Clay Shirky",
+    "year": 2009,
+    "url": "https://www.shirky.com/weblog/2009/03/newspapers-and-thinking-the-unthinkable/",
+    "minutes": 12,
+    "tags": [
+      "media",
+      "internet",
+      "institutions"
+    ],
+    "blurb": "Revolutions do not happen when society adopts new tools — they happen when society adopts new tools and old institutions cannot adapt."
+  },
+  {
+    "title": "Gin, Television, and Social Surplus",
+    "author": "Clay Shirky",
+    "publication": "Clay Shirky",
+    "year": 2008,
+    "url": "https://www.shirky.com/herecomeseverybody/2008/04/looking-for-the-mouse.html",
+    "minutes": 10,
+    "tags": [
+      "internet",
+      "culture",
+      "participation"
+    ],
+    "blurb": "We had a cognitive surplus; we spent it on sitcoms. The internet offered something else to do with free time."
+  },
+  {
+    "title": "The Collapse of Complex Business Models",
+    "author": "Clay Shirky",
+    "publication": "Clay Shirky",
+    "year": 2010,
+    "url": "https://www.shirky.com/weblog/2010/11/the-collapse-of-complex-business-models/",
+    "minutes": 10,
+    "tags": [
+      "media",
+      "business",
+      "complexity"
+    ],
+    "blurb": "When the environment changes, complexity that once was strength becomes fatal weight. A post-mortem template.",
+    "first": "2010-07",
+    "last": "2026-05",
+    "n": 1197
+  },
+  {
+    "title": "Here Comes Everybody",
+    "author": "Clay Shirky",
+    "publication": "Clay Shirky",
+    "year": 2008,
+    "url": "https://www.shirky.com/herecomeseverybody/2008/03/here-comes-everybody/",
+    "minutes": 14,
+    "tags": [
+      "internet",
+      "organizing",
+      "groups"
+    ],
+    "blurb": "How groups form when coordinating gets cheap — and why that breaks institutions built for expensive coordination."
+  },
+  {
+    "title": "Metacrap",
+    "author": "Cory Doctorow",
+    "publication": "Wired",
+    "year": 2001,
+    "url": "https://www.wired.com/2001/01/meta-crap/",
+    "minutes": 8,
+    "tags": [
+      "metadata",
+      "technology",
+      "skepticism"
+    ],
+    "blurb": "Everything you know about metadata is wrong, and the people selling it know that. Twenty years on, still quoted."
+  },
+  {
+    "title": "The Internet Con",
+    "author": "Cory Doctorow",
+    "publication": "Cory Doctorow",
+    "year": 2023,
+    "url": "https://pluralistic.net/2023/08/05/the-internet-con/",
+    "minutes": 16,
+    "tags": [
+      "internet",
+      "policy",
+      "monopoly"
+    ],
+    "blurb": "How enshittification works as a business model — and why 'just vote with your feet' is not a plan.",
+    "first": "2020-05",
+    "last": "2025-02",
+    "n": 907
+  },
+  {
+    "title": "Why I Won't Buy an iPad",
+    "author": "Cory Doctorow",
+    "publication": "The Guardian",
+    "year": 2010,
+    "url": "https://www.theguardian.com/technology/2010/apr/13/why-i-wont-buy-an-ipad",
+    "minutes": 6,
+    "tags": [
+      "technology",
+      "freedom",
+      "devices"
+    ],
+    "blurb": "A forecast of walled-garden computing framed as a personal purchase decision. Prescient and still irritating to fans."
+  },
+  {
+    "title": "Doctorow's First Law",
+    "author": "Cory Doctorow",
+    "publication": "Locus Magazine",
+    "year": 2014,
+    "url": "https://locusmag.com/2014/07/cory-doctorow-anyone-who-thinks-that-intermediaries-can-be-purged-isnt-paying-attention/",
+    "minutes": 8,
+    "tags": [
+      "internet",
+      "platforms",
+      "economics"
+    ],
+    "blurb": "Any time someone says intermediaries are obsolete, they are selling you something that needs an intermediary.",
+    "first": "2013-01",
+    "last": "2025-10",
+    "n": 201
+  },
+  {
+    "title": "A Brief History & Ethnography of LLMs",
+    "author": "Maggie Appleton",
+    "publication": "Maggie Appleton",
+    "year": 2023,
+    "url": "https://maggieappleton.com/ai-ethnography",
+    "minutes": 18,
+    "tags": [
+      "ai",
+      "culture",
+      "visual"
+    ],
+    "blurb": "LLMs as cultural artefacts, not just tools — mapped with Appleton's usual visual intelligence.",
+    "first": "2021-01",
+    "last": "2025-04",
+    "n": 551
+  },
+  {
+    "title": "The Dark Forest Theory of the Internet",
+    "author": "Maggie Appleton",
+    "publication": "Maggie Appleton",
+    "year": 2020,
+    "url": "https://maggieappleton.com/dark-forest-theory-of-the-internet",
+    "minutes": 12,
+    "tags": [
+      "internet",
+      "privacy",
+      "culture"
+    ],
+    "blurb": "Public speech online attracts predators; the wise retreat to private groves. A metaphor that names post-social-media behaviour."
+  },
+  {
+    "title": "Digital Gardeners",
+    "author": "Maggie Appleton",
+    "publication": "Maggie Appleton",
+    "year": 2020,
+    "url": "https://maggieappleton.com/garden-history",
+    "minutes": 14,
+    "tags": [
+      "web",
+      "publishing",
+      "tools"
+    ],
+    "blurb": "The history of tending a personal website like a garden — unfinished, linked, alive. A manifesto for this app's aesthetic cousins."
+  },
+  {
+    "title": "Tools for Thought",
+    "author": "Maggie Appleton",
+    "publication": "Maggie Appleton",
+    "year": 2021,
+    "url": "https://maggieappleton.com/tools-for-thought",
+    "minutes": 16,
+    "tags": [
+      "tools",
+      "thinking",
+      "design"
+    ],
+    "blurb": "A visual tour of note-taking cults and their promises. Skeptical without being cynical."
+  },
+  {
+    "title": "The Garden and the Stream",
+    "author": "Maggie Appleton",
+    "publication": "Maggie Appleton",
+    "year": 2019,
+    "url": "https://maggieappleton.com/garden-stream",
+    "minutes": 10,
+    "tags": [
+      "web",
+      "time",
+      "publishing"
+    ],
+    "blurb": "Ephemeral streams versus cultivated gardens — two metaphors for what the web could be.",
+    "first": "2017-05",
+    "last": "2025-11",
+    "n": 683
+  },
+  {
+    "title": "Looking for Alice",
+    "author": "Henrik Karlsson",
+    "publication": "Escaping Flatland",
+    "year": 2023,
+    "url": "https://www.henrikkarlsson.xyz/p/looking-for-alice",
+    "minutes": 22,
+    "tags": [
+      "relationships",
+      "search",
+      "culture"
+    ],
+    "blurb": "On finding a person, not a type — and how optimisation culture makes both harder. Tender and unusually honest.",
+    "first": "2021-03",
+    "last": "2026-04",
+    "n": 1169
+  },
+  {
+    "title": "On not being a normie",
+    "author": "Henrik Karlsson",
+    "publication": "Escaping Flatland",
+    "year": 2022,
+    "url": "https://www.henrikkarlsson.xyz/p/on-not-being-a-normie",
+    "minutes": 16,
+    "tags": [
+      "identity",
+      "culture",
+      "belonging"
+    ],
+    "blurb": "What it means to live slightly off the modal life path — without turning difference into a personality."
+  },
+  {
+    "title": "How to find a good partner",
+    "author": "Henrik Karlsson",
+    "publication": "Escaping Flatland",
+    "year": 2022,
+    "url": "https://www.henrikkarlsson.xyz/p/how-to-find-a-good-partner",
+    "minutes": 18,
+    "tags": [
+      "relationships",
+      "advice",
+      "life"
+    ],
+    "blurb": "Not listicle advice — a theory of compatibility that takes temperament and context seriously."
+  },
+  {
+    "title": "Why we can't have nice things",
+    "author": "Henrik Karlsson",
+    "publication": "Escaping Flatland",
+    "year": 2024,
+    "url": "https://www.henrikkarlsson.xyz/p/why-we-cant-have-nice-things",
+    "minutes": 14,
+    "tags": [
+      "culture",
+      "coordination",
+      "aesthetics"
+    ],
+    "blurb": "Nice things require shared standards and long horizons — both in short supply. A lament with structure."
+  },
+  {
+    "title": "The Most Precious Resource is Agency",
+    "author": "Simon Sarris",
+    "publication": "The Map is Mostly Water",
+    "year": 2021,
+    "url": "https://simonsarris.substack.com/p/the-most-precious-resource-is-agency",
+    "minutes": 12,
+    "tags": [
+      "agency",
+      "parenting",
+      "education"
+    ],
+    "blurb": "Schools train compliance; the world rewards people who can act without permission. A case for protecting agency early.",
+    "first": "2019-03",
+    "last": "2025-02",
+    "n": 540
+  },
+  {
+    "title": "How to Live an Intellectually Rich Life",
+    "author": "Simon Sarris",
+    "publication": "The Map is Mostly Water",
+    "year": 2022,
+    "url": "https://simonsarris.substack.com/p/how-to-live-an-intellectually-rich",
+    "minutes": 14,
+    "tags": [
+      "learning",
+      "life",
+      "curiosity"
+    ],
+    "blurb": "Breadth, slack, and seriousness — not hacks. Sarris on building a mind that stays interesting after university."
+  },
+  {
+    "title": "The Usefulness of Useless Knowledge",
+    "author": "Simon Sarris",
+    "publication": "The Map is Mostly Water",
+    "year": 2023,
+    "url": "https://simonsarris.substack.com/p/the-usefulness-of-useless-knowledge",
+    "minutes": 10,
+    "tags": [
+      "learning",
+      "curiosity",
+      "education"
+    ],
+    "blurb": "Abraham Flexner updated for people who feel guilty reading outside their lane. Permission to wander."
+  },
+  {
+    "title": "On Self-Respect",
+    "author": "Joan Didion",
+    "publication": "Vogue",
+    "year": 1961,
+    "url": "https://www.vogue.com/article/joan-didion-self-respect-essay",
+    "minutes": 8,
+    "tags": [
+      "character",
+      "life",
+      "writing"
+    ],
+    "blurb": "Self-respect is a discipline, not a mood — and once lost it is hard to borrow from someone else. Didion at her most precise."
+  },
+  {
+    "title": "Goodbye to All That",
+    "author": "Joan Didion",
+    "publication": "Slouching Towards Bethlehem",
+    "year": 1967,
+    "url": "https://www.esquire.com/lifestyle/a43154/joan-didion-goodbye-to-all-that/",
+    "minutes": 14,
+    "tags": [
+      "new-york",
+      "youth",
+      "memoir"
+    ],
+    "blurb": "Leaving New York as a moral decision, not a geographic one. The template for every later 'I quit the city' essay."
+  },
+  {
+    "title": "The White Album",
+    "author": "Joan Didion",
+    "publication": "The New York Review of Books",
+    "year": 1979,
+    "url": "https://www.nybooks.com/articles/1979/06/14/the-white-album/",
+    "minutes": 20,
+    "tags": [
+      "california",
+      "culture",
+      "history"
+    ],
+    "blurb": "The sixties did not hold together as a story — Didion reports from inside the fracture. Journalism as literature."
+  },
+  {
+    "title": "Slouching Towards Bethlehem",
+    "author": "Joan Didion",
+    "publication": "The Saturday Evening Post",
+    "year": 1967,
+    "url": "https://www.saturdayeveningpost.com/2017/12/slouching-towards-bethlehem/",
+    "minutes": 16,
+    "tags": [
+      "california",
+      "counterculture",
+      "reportage"
+    ],
+    "blurb": "Haight-Ashbury without romance — Didion watching a scene realize it has no centre."
+  },
+  {
+    "title": "Politics and the English Language",
+    "author": "George Orwell",
+    "publication": "Horizon",
+    "year": 1946,
+    "url": "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/",
+    "minutes": 12,
+    "tags": [
+      "writing",
+      "politics",
+      "language"
+    ],
+    "blurb": "Bad prose and bad politics share habits — vagueness, passive voice, ready-made phrases. Still the best editing checklist with stakes."
+  },
+  {
+    "title": "Why I Write",
+    "author": "George Orwell",
+    "publication": "Gangrel",
+    "year": 1946,
+    "url": "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/why-i-write/",
+    "minutes": 8,
+    "tags": [
+      "writing",
+      "motivation",
+      "craft"
+    ],
+    "blurb": "Four motives for writing — sheer egoism, aesthetic enthusiasm, historical impulse, political purpose — and how they fight.",
+    "first": "2008-06",
+    "last": "2026-07",
+    "n": 872
+  },
+  {
+    "title": "Cargo Cult Science",
+    "author": "Richard Feynman",
+    "publication": "Engineering and Science",
+    "year": 1974,
+    "url": "https://calteches.library.caltech.edu/51/2/CargoCult.htm",
+    "minutes": 12,
+    "tags": [
+      "science",
+      "integrity",
+      "methodology"
+    ],
+    "blurb": "The difference between looking scientific and being scientific — told with Feynman's impatient warmth.",
+    "first": "2008-06",
+    "last": "2025-04",
+    "n": 496
+  },
+  {
+    "title": "Teach Yourself Programming in Ten Years",
+    "author": "Peter Norvig",
+    "publication": "Peter Norvig",
+    "year": 2001,
+    "url": "https://norvig.com/21-days.html",
+    "minutes": 6,
+    "tags": [
+      "programming",
+      "learning",
+      "craft"
+    ],
+    "blurb": "The book title is a lie; expertise takes a decade. Norvig's polite demolition of shortcut culture.",
+    "first": "2008-04",
+    "last": "2025-03",
+    "n": 884
+  },
+  {
+    "title": "The Angel's Thesis",
+    "author": "James Somers",
+    "publication": "James Somers",
+    "year": 2017,
+    "url": "https://jsomers.net/blog/angels-thesis",
+    "minutes": 10,
+    "tags": [
+      "writing",
+      "craft",
+      "attention"
+    ],
+    "blurb": "On sentences that carry more weight than their length suggests — and how to notice them when you read.",
+    "first": "2014-01",
+    "last": "2026-02",
+    "n": 448
+  },
+  {
+    "title": "Six Months in a Leaky Boat",
+    "author": "James Somers",
+    "publication": "The Atlantic",
+    "year": 2013,
+    "url": "https://www.theatlantic.com/technology/archive/2013/03/six-months-in-a-leaky-boat/273977/",
+    "minutes": 14,
+    "tags": [
+      "programming",
+      "startups",
+      "journalism"
+    ],
+    "blurb": "Inside the world of quantified-self startups — Somers reporting before he became the essayist developers quote.",
+    "first": "2012-04",
+    "last": "2025-09",
+    "n": 958
+  },
+  {
+    "title": "Taming the Mammoth",
+    "author": "Tim Urban",
+    "publication": "Wait But Why",
+    "year": 2014,
+    "url": "https://waitbutwhy.com/2014/06/taming-mammoth-stop-caring-what-people-think.html",
+    "minutes": 18,
+    "tags": [
+      "psychology",
+      "social",
+      "life"
+    ],
+    "blurb": "Social approval as a prehistoric beast riding your decisions. Pop psychology that accidentally helps.",
+    "first": "2013-03",
+    "last": "2026-04",
+    "n": 1165
+  },
+  {
+    "title": "Science Is Broken. Here's How to Fix It.",
+    "author": "Adam Mastroianni",
+    "publication": "Experimental History",
+    "year": 2023,
+    "url": "https://www.experimental-history.com/p/science-is-broken-heres-how-to-fix",
+    "minutes": 20,
+    "tags": [
+      "science",
+      "reform",
+      "research"
+    ],
+    "blurb": "Not just critique — actual proposals for making science less performative. Mastroianni at his most constructive.",
+    "first": "2023-10",
+    "last": "2025-11",
+    "n": 521
+  },
+  {
+    "title": "Things I Believe",
+    "author": "Adam Mastroianni",
+    "publication": "Experimental History",
+    "year": 2021,
+    "url": "https://www.experimental-history.com/p/things-i-believe",
+    "minutes": 10,
+    "tags": [
+      "beliefs",
+      "science",
+      "life"
+    ],
+    "blurb": "A numbered list of convictions stated plainly enough to disagree with. Refreshing in a genre of hedged manifestos.",
+    "first": "2019-05",
+    "last": "2026-02",
+    "n": 742
+  },
+  {
+    "title": "Questions",
+    "author": "Patrick Collison",
+    "publication": "Patrick Collison",
+    "year": 2019,
+    "url": "https://patrickcollison.com/questions",
+    "minutes": 8,
+    "tags": [
+      "questions",
+      "research",
+      "curiosity"
+    ],
+    "blurb": "A list of open questions worth working on — less answer than invitation. Collison's taste on display.",
+    "first": "2018-05",
+    "last": "2026-02",
+    "n": 654
+  },
+  {
+    "title": "How to Build a Better Social Network",
+    "author": "Ivan Vendrov",
+    "publication": "Ivan Vendrov",
+    "year": 2024,
+    "url": "https://ivan.vendrov.io/posts/how-to-build-a-better-social-network",
+    "minutes": 14,
+    "tags": [
+      "social",
+      "design",
+      "product"
+    ],
+    "blurb": "Concrete mechanisms for healthier online community — rare in a genre of hand-wringing.",
+    "first": "2021-09",
+    "last": "2026-01",
+    "n": 547
+  },
+  {
+    "title": "Play in Hard Mode",
+    "author": "Zvi Mowshowitz",
+    "publication": "Don't Worry About the Vase",
+    "year": 2018,
+    "url": "https://thezvi.wordpress.com/2018/07/04/play-in-hard-mode/",
+    "minutes": 10,
+    "tags": [
+      "life",
+      "challenge",
+      "growth"
+    ],
+    "blurb": "Easy mode teaches the wrong lessons; hard mode is how you actually level up. Game metaphors that earn their keep.",
+    "first": "2018-04",
+    "last": "2025-07",
+    "n": 1034
+  },
+  {
+    "title": "A Lesson in Safe Design",
+    "author": "Richard Cook",
+    "publication": "Richard Cook",
+    "year": 2007,
+    "url": "https://www.adaptivecapacitylabs.com/blog/2019/09/23/a-lesson-in-safe-design/",
+    "minutes": 8,
+    "tags": [
+      "safety",
+      "design",
+      "healthcare"
+    ],
+    "blurb": "Safety is an emergent property of systems, not a component you bolt on. Cook compresses a career into one anecdote.",
+    "first": "2008-02",
+    "last": "2025-01",
+    "n": 1174
+  },
+  {
+    "title": "The Present Situation of Philosophy",
+    "author": "Bertrand Russell",
+    "publication": "The Monist",
+    "year": 1918,
+    "url": "https://www.gutenberg.org/files/5827/5827-h/5827-h.htm",
+    "minutes": 20,
+    "tags": [
+      "philosophy",
+      "history",
+      "analysis"
+    ],
+    "blurb": "Russell clearing ground for analytic philosophy — dense, but the opening chapters repay the climb.",
+    "first": "2008-07",
+    "last": "2026-06",
+    "n": 804
+  },
+  {
+    "title": "Consider the Lobster",
+    "author": "David Foster Wallace",
+    "publication": "Gourmet",
+    "year": 2004,
+    "url": "https://www.theringer.com/2020/8/28/21402987/consider-the-lobster-david-foster-wallace",
+    "minutes": 18,
+    "tags": [
+      "ethics",
+      "food",
+      "consciousness"
+    ],
+    "blurb": "A food festival assignment that becomes a serious question about suffering — and about what journalism can ask.",
+    "first": "2008-02",
+    "last": "2026-07",
+    "n": 1167
+  },
+  {
+    "title": "A Supposedly Fun Thing I'll Never Do Again",
+    "author": "David Foster Wallace",
+    "publication": "Harper's",
+    "year": 1996,
+    "url": "https://harpers.org/archive/1996/01/a-supposedly-fun-thing-ill-never-do-again/",
+    "minutes": 25,
+    "tags": [
+      "travel",
+      "culture",
+      "entertainment"
+    ],
+    "blurb": "A cruise ship as American excess laboratory — Wallace funny, miserable, and precise in equal measure.",
+    "first": "2008-09",
+    "last": "2025-12",
+    "n": 1008
+  },
+  {
+    "title": "The Work of Art in the Age of Mechanical Reproduction",
+    "author": "Walter Benjamin",
+    "publication": "Zeitschrift für Sozialforschung",
+    "year": 1935,
+    "url": "https://www.marxists.org/reference/subject/philosophy/works/ge/benjamin.htm",
+    "minutes": 18,
+    "tags": [
+      "art",
+      "technology",
+      "culture"
+    ],
+    "blurb": "Reproduction changes aura — Benjamin's lens for thinking about copies, memes, and AI slop alike.",
+    "first": "2008-02",
+    "last": "2025-06",
+    "n": 1083
+  },
+  {
+    "title": "The Hedgehog and the Fox",
+    "author": "Isaiah Berlin",
+    "publication": "The Hedgehog and the Fox",
+    "year": 1953,
+    "url": "https://www.wisdomportal.com/Enlightenment/Berlin-Hedgehog-Fox.html",
+    "minutes": 10,
+    "tags": [
+      "philosophy",
+      "history",
+      "thinking"
+    ],
+    "blurb": "One big idea versus many small ones — a typology for thinkers that also describes how you read.",
+    "first": "2008-09",
+    "last": "2026-06",
+    "n": 451
+  },
+  {
+    "title": "The Problem of Social Cost",
+    "author": "Ronald Coase",
+    "publication": "Journal of Law and Economics",
+    "year": 1960,
+    "url": "https://www.sfu.ca/~allen/CoaseJLE1960.pdf",
+    "minutes": 18,
+    "tags": [
+      "law",
+      "economics",
+      "externalities"
+    ],
+    "blurb": "Rights and liabilities get assigned to minimise total cost — the foundation of law-and-economics in one paper.",
+    "first": "2008-07",
+    "last": "2026-03",
+    "n": 263
+  },
+  {
+    "title": "The Banality of Evil",
+    "author": "Hannah Arendt",
+    "publication": "The New Yorker",
+    "year": 1963,
+    "url": "https://www.newyorker.com/magazine/1963/02/16/eichmann-in-jerusalem-i",
+    "minutes": 20,
+    "tags": [
+      "politics",
+      "morality",
+      "history"
+    ],
+    "blurb": "Eichmann as bureaucrat, not monster — the report that argued evil could be ordinary and infuriated everyone.",
+    "first": "2008-10",
+    "last": "2026-05",
+    "n": 164
+  },
+  {
+    "title": "The Power Broker",
+    "author": "Robert Caro",
+    "publication": "The New Yorker",
+    "year": 1974,
+    "url": "https://www.newyorker.com/magazine/1974/08/05/the-power-broker",
+    "minutes": 30,
+    "tags": [
+      "power",
+      "biography",
+      "cities"
+    ],
+    "blurb": "How Robert Moses reshaped New York without ever winning an election — an excerpt that reads like a thriller.",
+    "first": "2008-11",
+    "last": "2026-03",
+    "n": 907
+  }
+]

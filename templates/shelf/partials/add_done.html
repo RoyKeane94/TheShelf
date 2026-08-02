@@ -1,0 +1,12 @@
+{% load shelf_tags %}
+<div class="add-done show" id="{{ form_prefix }}-done">
+  <h4>
+    <span class="spine-chip" style="background:{{ essay|ink_bg }}"></span>
+    <a href="{{ essay.get_absolute_url }}">{{ essay.title }}</a>
+  </h4>
+  <p>
+    {% if created %}Added{% else %}Already on the shelf — logged for you{% endif %}.
+    {% if rating %}Logged at {{ rating.half_stars|half_stars_display }}.{% else %}Logged without a rating.{% endif %}
+    It has its own page now.
+  </p>
+</div>

@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+{% load shelf_tags %}
+
+{% block title %}The Shelf{% endblock %}
+
+{% block content %}
+<section class="hero dots">
+  <div class="hero-in">
+    <h1>A great essay gets one good day, then <em>disappears.</em></h1>
+    <p class="sub">Twitter is a firehose, not a library. The Shelf gives every essay one permanent page that keeps collecting readers, ratings and notes for years — so good writing gets easier to find over time, not harder.</p>
+    <div class="cta-row">
+      <a class="cta" href="#how">Start shelving <span>→</span></a>
+      <a class="cta line" href="#shelves">Browse public shelves</a>
+    </div>
+  </div>
+  <div class="stage">
+    <div class="spines" id="spines" role="list" aria-label="Shelved essays">
+      {% for e in spines %}
+      <a class="spine" role="listitem"
+         style="height:{{ e|spine_height }}px;background:{{ e|ink_bg }};color:{{ e|ink_fg }}"
+         href="{{ e.get_absolute_url }}"
+         title="{{ e.title }} — {{ e.author }}"><span>{{ e.title }}</span></a>
+      {% endfor %}
+    </div>
+    <div class="board"></div>
+    <div class="plinth"></div>
+  </div>
+</section>
+
+<section class="sec" id="how">
+  <div class="wrap">
+    <div class="head">
+      <h2>You can name four favourite films in a second. <em>Now name four essays.</em></h2>
+      <p>You have read a few dozen pieces that changed how you argue, and no page anywhere carries your name next to them. Log one and it goes on a shelf under your name, where anyone can read it.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step rv">
+        <div class="step-n">Step 01 · The only required tap</div>
+        <h4>Log it</h4>
+        <p>One tap files it under your name and adds it to the essay's log. Add half-stars if you have a view, or leave it blank.</p>
+      </div>
+      <div class="step rv">
+        <div class="step-n">Step 02 · Whenever</div>
+        <h4>Sort your shelves</h4>
+        <p>Everything lands on your default shelf. Move pieces onto named shelves whenever you like. Your shelves are a portrait of how you think, and strangers read them for that.</p>
+      </div>
+      <div class="step rv">
+        <div class="step-n">Step 03 · Optional</div>
+        <h4>Say something</h4>
+        <p>One line, if you have one. Most readers never write a note, and their shelves carry the same weight.</p>
+      </div>
+    </div>
+
+    <div class="scenario dots rv">
+      <div class="scenario-k">What that looks like on a Tuesday</div>
+      <p>You finish <b>The Housing Theory of Everything</b> on the 7:40 into Waterloo and tap <b>Log it</b> before you pocket your phone. Four stars, if you feel like it. Three seconds, no review to write.</p>
+      <p>Nine people follow your shelf. Two read it that week because your name is next to it. In 2031 it still sits near the top of the housing shelf, carrying your stamp among four hundred others.</p>
+    </div>
+
+    {% if example %}
+    <div class="eg rv">
+      <div class="eg-head">
+        <span class="av">{{ example.shelf.owner.profile.initials }}</span>
+        <div>
+          <b>@{{ example.shelf.owner.profile.handle }}</b>
+          <span>{{ example.picks|length }} logs on {{ example.shelf.name }}</span>
+        </div>
+      </div>
+      <div class="eg-body">
+        <div class="eg-col">
+          <div class="eg-k">They logged</div>
+          {% for e in example.picks %}
+          <a href="{{ e.get_absolute_url }}"><i style="background:{{ e|ink_bg }}"></i>{{ e.title }}</a>
+          {% endfor %}
+        </div>
+        <div class="eg-arrow" aria-hidden="true">→</div>
+        <div class="eg-col">
+          <div class="eg-k">Which turned up</div>
+          <a class="eg-find" href="{{ example.found.get_absolute_url }}"><i style="background:{{ example.found|ink_bg }}"></i>{{ example.found.title }}</a>
+          <p>
+            {{ example.found.author }}{% if example.found.published_year %}, {{ example.found.published_year }}{% endif %}.
+            {% if example.holder %}Sitting on @{{ example.holder.user.profile.handle }}'s shelf since {{ example.since_year }}{% elif example.since_year %}On shelves since {{ example.since_year }}{% endif %}, and not something they would have gone looking for.
+          </p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="sec" id="shelves">
+  <div class="wrap">
+    <div class="head">
+      <h2>Public shelves are the <em>discovery surface.</em></h2>
+      <p>A person you trust, and the twenty things they kept. Tap a shelf to open it.</p>
+    </div>
+    <div class="shelf-grid">
+      {% for s in shelves %}
+      <a class="shelf-card{% if forloop.first %} featured{% endif %}" href="{{ s.get_absolute_url }}">
+        <div class="sc-by">@{{ s.owner.profile.handle }}{% if s.owner.profile.display_name %} · {{ s.owner.profile.display_name }}{% endif %}</div>
+        <h3>{{ s.name }}</h3>
+        <div class="sc-desc">{{ s.description }}</div>
+        <div class="sc-strip">
+          {% for sh in s.active_shelvings|slice:":8" %}
+          <i style="background:{{ sh.essay|ink_bg }}" title="{{ sh.essay.title }} · {{ sh.essay.author }}"></i>
+          {% endfor %}
+        </div>
+        <div class="sc-n">{{ s.n_items }} on the shelf · hover a spine</div>
+      </a>
+      {% empty %}
+      <p class="empty">No public shelves yet. Be the first.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="feed">
+  <div class="wrap">
+    <div class="two">
+      <div>
+        <h3>Newly logged</h3>
+        <div style="margin-top:26px">
+          {% for f in feed %}
+          <a class="feed-item" href="{{ f.essay.get_absolute_url }}">
+            <span class="av">{{ f.user.profile.initials }}</span>
+            <span style="flex:1">
+              <div class="act"><b>@{{ f.user.profile.handle }}</b> shelved to <b>{{ f.shelf.name }}</b></div>
+              <span class="row-t"><em style="background:{{ f.essay|ink_bg }}"></em>{{ f.essay.title }}</span>
+              <div class="row-b">{{ f.essay.author }}{% if f.essay.published_year %} · {{ f.essay.published_year }}{% endif %}</div>
+            </span>
+          </a>
+          {% empty %}
+          <p class="empty">Nothing logged yet.</p>
+          {% endfor %}
+          <p class="hint"><a class="btn text" href="{% url 'discover' %}">See all on Discover →</a></p>
+        </div>
+      </div>
+      <div>
+        <h3>Held up longest</h3>
+        <div style="margin-top:26px">
+          {% for e in held %}
+          <a class="row drow" href="{{ e.get_absolute_url }}">
+            <span class="row-i">{{ forloop.counter|stringformat:"02d" }}</span>
+            <span>
+              <span class="row-t">{{ e.title }}</span>
+              <div class="row-b">{{ e.author }}{% if e.published_year %} · {{ e.published_year }}{% endif %}</div>
+              {% if e.circ %}
+              {% circulation_bar e.circ.first_year e.circ.last_year e.circ.still_going held_min_year as bar %}
+              <div class="span"><i style="left:{{ bar.left }}%;right:{{ bar.right }}%"></i></div>
+              <div class="span-lab"><span>{{ bar.label_left }}</span><span>{{ bar.label_right }}</span></div>
+              {% endif %}
+            </span>
+          </a>
+          {% empty %}
+          <p class="empty">Nothing held up yet.</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="add">
+  <div class="wrap">
+    <div class="head">
+      <h2>Something missing? <em>Put it on the shelf.</em></h2>
+    </div>
+    <div class="add">
+      <div class="add-note">
+        <p>Anyone can add an essay. It gets a permanent page from the moment you submit it, and it stays there whether or not anyone else ever logs it.</p>
+        <p>Give it a line of your own rather than pasting the standfirst. The blurb is what makes someone click, and yours will be better than the publisher's.</p>
+      </div>
+      <div>
+        {% if user.is_authenticated %}
+          {% include "shelf/partials/add_form.html" with form=add_form form_prefix="sec" in_modal=False %}
+        {% else %}
+          <p class="add-note">You need an account to add an essay.</p>
+          <div class="after-line" style="margin-top:18px">
+            <a class="btn solid" href="{% url 'signup' %}">Sign up</a>
+            <a class="btn text" href="{% url 'login' %}?next={% url 'add' %}">Log in</a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

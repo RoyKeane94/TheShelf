@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load shelf_tags %}
+
+{% block title %}{{ shelf.name }} · @{{ profile.handle }}{% endblock %}
+
+{% block content %}
+<section class="essay-hero dots">
+  <div class="wrap">
+    <div class="meta"><a href="{% url 'profile' profile.handle %}">@{{ profile.handle }}</a> · public shelf</div>
+    <h1>{{ shelf.name }}</h1>
+    {% if shelf.description %}<div class="byline">{{ shelf.description }}</div>{% endif %}
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="shelf-body">
+      {% for s in shelvings %}
+      <div class="row" style="grid-template-columns:28px 1fr auto;align-items:start">
+        <span class="row-i">{{ forloop.counter|stringformat:"02d" }}</span>
+        <span>
+          <a class="row-t" href="{{ s.essay.get_absolute_url }}">
+            <em style="background:{{ s.essay|ink_bg }}"></em>{{ s.essay.title }}
+          </a>
+          <div class="row-b">
+            {{ s.essay.author }}{% if s.essay.published_year %} · {{ s.essay.published_year }}{% endif %}
+            {% if s.essay.blurb %} — {{ s.essay.blurb|truncatechars:120 }}{% endif %}
+          </div>
+          <div style="margin-top:12px">
+            {% include "shelf/partials/log_control.html" with essay=s.essay logged=s.viewer_logged rating=s.viewer_rating compact=True %}
+          </div>
+        </span>
+        <a class="go" href="{{ s.essay.get_absolute_url }}" style="opacity:1;transform:none;margin-top:4px">→</a>
+      </div>
+      {% empty %}
+      <p class="empty">This shelf is empty.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

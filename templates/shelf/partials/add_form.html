@@ -1,0 +1,51 @@
+{% comment %}
+  Shared add-essay form. Rendered into the landing section and the nav modal.
+  Field ids are prefixed so the two instances never collide.
+{% endcomment %}
+<form id="{{ form_prefix }}-form"
+      method="post"
+      action="{% url 'add_htmx' %}"
+      hx-post="{% url 'add_htmx' %}"
+      hx-target="this"
+      hx-swap="outerHTML"
+      novalidate>
+  {% csrf_token %}
+  <input type="hidden" name="form_prefix" value="{{ form_prefix }}">
+  {% if in_modal %}<input type="hidden" name="in_modal" value="1">{% endif %}
+
+  <div class="field-row">
+    <label for="{{ form_prefix }}-name">Title</label>
+    <input id="{{ form_prefix }}-name" name="title" type="text"
+           value="{{ form.title.value|default:'' }}"
+           placeholder="The Housing Theory of Everything" autocomplete="off"
+           class="{% if form.title.errors %}bad{% endif %}">
+    {% if form.title.errors %}<ul class="errorlist">{% for e in form.title.errors %}<li>{{ e }}</li>{% endfor %}</ul>{% endif %}
+  </div>
+
+  <div class="field-row">
+    <label for="{{ form_prefix }}-url">URL</label>
+    <input id="{{ form_prefix }}-url" name="url" type="url"
+           value="{{ form.url.value|default:'' }}"
+           placeholder="https://worksinprogress.co/issue/..." autocomplete="off"
+           class="{% if form.url.errors %}bad{% endif %}">
+    {% if form.url.errors %}<ul class="errorlist">{% for e in form.url.errors %}<li>{{ e }}</li>{% endfor %}</ul>{% endif %}
+  </div>
+
+  <div class="field-row">
+    <label for="{{ form_prefix }}-desc">Why it is worth reading</label>
+    <textarea id="{{ form_prefix }}-desc" name="blurb"
+              placeholder="One or two lines. What does it change for the person who reads it?"
+              class="{% if form.blurb.errors %}bad{% endif %}"
+              x-data="{ n: {{ form.blurb.value|default:''|length }} }"
+              x-on:input="n = $el.value.trim().length">{{ form.blurb.value|default:'' }}</textarea>
+    <p class="field-hint" id="{{ form_prefix }}-count" x-text="n === 1 ? '1 character' : n + ' characters'">0 characters</p>
+    {% if form.blurb.errors %}<ul class="errorlist">{% for e in form.blurb.errors %}<li>{{ e }}</li>{% endfor %}</ul>{% endif %}
+  </div>
+
+  <div class="field-row">
+    <label>Your rating <span style="text-transform:none;letter-spacing:0;font-weight:400">(optional)</span></label>
+    {% include "shelf/partials/stars.html" with prefix=form_prefix half_stars=form.half_stars.value %}
+  </div>
+
+  <button class="btn solid" type="submit">Add to the shelf</button>
+</form>
