@@ -12,7 +12,8 @@ urlpatterns = [
     path("e/<slug:slug>/log/", views.log, name="log"),
     path("signup/", views.signup, name="signup"),
     path("login/", views.ShelfLoginView.as_view(), name="login"),
-    path("logout/", views.ShelfLogoutView.as_view(), name="logout"),
+    path("logout/", views.logout_view, name="logout"),
+    path("settings/", views.account_settings, name="settings"),
     path("@<slug:handle>/", views.profile, name="profile"),
     path("@<slug:handle>/<slug:shelf_slug>/", views.shelf_detail, name="shelf"),
 ]

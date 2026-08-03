@@ -1,16 +1,16 @@
 import json
 
 from django.contrib import messages
-from django.contrib.auth import login
+from django.contrib.auth import login, logout, update_session_auth_hash
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.views import LoginView
 from django.db.models import Count, Prefetch, Q
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.views.decorators.http import require_GET, require_http_methods, require_POST
 
-from .forms import AddEssayForm, LoginForm, SignupForm
+from .forms import AccountSettingsForm, AddEssayForm, LoginForm, SignupForm
 from .models import Essay, Log, Note, Profile, Rating, Shelf, Shelving
 from .ranking import circulation, ranked, with_stats
 from .services import add_essay, log_essay, user_has_logged, user_rating
@@ -480,8 +480,40 @@ class ShelfLoginView(LoginView):
     redirect_authenticated_user = True
 
 
-class ShelfLogoutView(LogoutView):
-    next_page = "landing"
+@login_required
+@require_http_methods(["GET", "POST"])
+def account_settings(request):
+    profile = request.user.profile
+    if request.method == "POST":
+        form = AccountSettingsForm(request.user, request.POST)
+        if form.is_valid():
+            form.save()
+            if form.cleaned_data.get("new_password1"):
+                update_session_auth_hash(request, request.user)
+            messages.success(request, "Settings saved.")
+            return redirect("settings")
+    else:
+        form = AccountSettingsForm(
+            request.user,
+            initial={
+                "handle": profile.handle,
+                "display_name": profile.display_name,
+                "email": request.user.email,
+                "bio": profile.bio,
+            },
+        )
+    return render(request, "shelf/settings.html", {"form": form})
+
+
+@require_http_methods(["GET", "POST"])
+def logout_view(request):
+    if not request.user.is_authenticated:
+        return redirect("landing")
+    if request.method == "POST":
+        logout(request)
+        messages.success(request, "You’re logged out.")
+        return redirect("landing")
+    return render(request, "shelf/logout.html")
 
 
 _ERROR_COPY = {

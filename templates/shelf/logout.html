@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Log out{% endblock %}
+
+{% block content %}
+<section class="sec" style="padding-top:72px">
+  <div class="wrap">
+    <div class="auth-box">
+      <div class="head">
+        <h2>Log out of <em>The Shelf?</em></h2>
+        <p>Your shelves stay where they are. You can log back in whenever you like.</p>
+      </div>
+      <form method="post">
+        {% csrf_token %}
+        <div class="after-line">
+          <button class="btn solid" type="submit">Log out</button>
+          <a class="btn text" href="{% url 'settings' %}">Stay signed in</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

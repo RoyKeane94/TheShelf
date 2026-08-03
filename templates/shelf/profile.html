@@ -10,6 +10,11 @@
     <h1>@{{ profile.handle }}</h1>
     {% if profile.display_name %}<div class="byline">{{ profile.display_name }}</div>{% endif %}
     {% if profile.bio %}<p class="sub" style="margin:18px 0 0;text-align:left;max-width:54ch">{{ profile.bio }}</p>{% endif %}
+    {% if user.is_authenticated and user.profile.handle == profile.handle %}
+    <div class="after-line" style="margin-top:22px">
+      <a class="btn ghost" href="{% url 'settings' %}">Account settings</a>
+    </div>
+    {% endif %}
   </div>
 </section>
 

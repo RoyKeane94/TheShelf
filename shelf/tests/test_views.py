@@ -30,6 +30,17 @@ class RouteTests(TestCase):
             with self.subTest(url=url):
                 self.assertEqual(self.client.get(url).status_code, 200)
 
+    def test_settings_and_logout_require_a_login(self):
+        for name in ("settings", "logout"):
+            with self.subTest(name=name):
+                response = self.client.get(reverse(name))
+                if name == "logout":
+                    self.assertEqual(response.status_code, 302)
+                    self.assertEqual(response["Location"], reverse("landing"))
+                else:
+                    self.assertEqual(response.status_code, 302)
+                    self.assertIn(reverse("login"), response["Location"])
+
     def test_add_requires_a_login(self):
         response = self.client.get(reverse("add"))
         self.assertEqual(response.status_code, 302)
@@ -81,6 +92,45 @@ class ErrorPageTests(TestCase):
         self.assertTrue(
             Log.objects.filter(kind="error.404", path=response.wsgi_request.path).exists()
         )
+
+
+class AccountSettingsTests(TestCase):
+    def setUp(self):
+        self.user = make_user("setter")
+        self.client.login(username="setter", password=PASSWORD)
+
+    def test_settings_page_renders(self):
+        response = self.client.get(reverse("settings"))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Account")
+        self.assertContains(response, "setter")
+
+    def test_settings_update_handle_and_bio(self):
+        response = self.client.post(
+            reverse("settings"),
+            {
+                "handle": "new-setter",
+                "display_name": "New Setter",
+                "email": "setter@example.com",
+                "bio": "Keeps the good ones.",
+                "new_password1": "",
+                "new_password2": "",
+            },
+        )
+        self.assertRedirects(response, reverse("settings"))
+        self.user.refresh_from_db()
+        self.user.profile.refresh_from_db()
+        self.assertEqual(self.user.username, "new-setter")
+        self.assertEqual(self.user.profile.handle, "new-setter")
+        self.assertEqual(self.user.profile.bio, "Keeps the good ones.")
+
+    def test_logout_page_and_post(self):
+        page = self.client.get(reverse("logout"))
+        self.assertEqual(page.status_code, 200)
+        self.assertContains(page, "Log out of")
+        response = self.client.post(reverse("logout"))
+        self.assertRedirects(response, reverse("landing"))
+        self.assertFalse(response.wsgi_request.user.is_authenticated)
 
 
 class LogEndpointTests(TestCase):

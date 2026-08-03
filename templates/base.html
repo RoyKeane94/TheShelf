@@ -56,8 +56,9 @@
       <div class="mark"><a href="{% url 'landing' %}">The Shelf</a></div>
       <div class="nav-r">
         {% if user.is_authenticated %}
-          <a href="{% url 'profile' user.profile.handle %}">@{{ user.profile.handle }}</a>
-          <a class="pill" href="{% url 'add' %}" data-addmodal data-auth="1">Add an essay</a>
+          <a class="nav-handle" href="{% url 'profile' user.profile.handle %}">@{{ user.profile.handle }}</a>
+          <a href="{% url 'settings' %}">Settings</a>
+          <a class="pill" href="{% url 'logout' %}">Log out</a>
         {% else %}
           <a href="{% url 'login' %}">Log in</a>
           <a class="pill" href="{% url 'signup' %}">Sign up</a>
