@@ -25,7 +25,7 @@
                 · {{ f.created_at|timesince }} ago
               </div>
               <a class="row-t" href="{{ f.essay.get_absolute_url }}"><em style="background:{{ f.essay|ink_bg }}"></em>{{ f.essay.title }}</a>
-              <div class="row-b">{{ f.essay.author }}{% if f.essay.published_year %} · {{ f.essay.published_year }}{% endif %}</div>
+              <div class="row-b">{{ f.essay.display_author }}{% if f.essay.published_year %} · {{ f.essay.published_year }}{% endif %}</div>
               <div style="margin-top:12px">
                 {% include "shelf/partials/log_control.html" with essay=f.essay logged=f.essay.viewer_logged rating=f.essay.viewer_rating compact=True %}
               </div>
@@ -44,7 +44,7 @@
             <span class="row-i">{{ forloop.counter|stringformat:"02d" }}</span>
             <span>
               <a class="row-t" href="{{ e.get_absolute_url }}">{{ e.title }}</a>
-              <div class="row-b">{{ e.author }}{% if e.published_year %} · {{ e.published_year }}{% endif %}</div>
+              <div class="row-b">{{ e.display_author }}{% if e.published_year %} · {{ e.published_year }}{% endif %}</div>
               {% if e.circ %}
               {% circulation_bar e.circ.first_year e.circ.last_year e.circ.still_going held_min_year as bar %}
               <div class="span"><i style="left:{{ bar.left }}%;right:{{ bar.right }}%"></i></div>

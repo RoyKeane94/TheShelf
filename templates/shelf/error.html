@@ -30,7 +30,7 @@
         <div class="sc-desc">{{ s.description }}</div>
         <div class="sc-strip">
           {% for sh in s.active_shelvings|slice:":8" %}
-          <i style="background:{{ sh.essay|ink_bg }}" title="{{ sh.essay.title }} · {{ sh.essay.author }}"></i>
+          <i style="background:{{ sh.essay|ink_bg }}" title="{{ sh.essay.title }} · {{ sh.essay.display_author }}"></i>
           {% endfor %}
         </div>
         <div class="sc-n">{{ s.n_items }} on the shelf · hover a spine</div>

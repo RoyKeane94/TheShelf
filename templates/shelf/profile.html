@@ -56,7 +56,7 @@
         <span>
           <span class="row-t"><em style="background:{{ s.essay|ink_bg }}"></em>{{ s.essay.title }}</span>
           <div class="row-b">
-            {{ s.essay.author }}
+            {{ s.essay.display_author }}
             · shelved to {{ s.shelf.name }}
             · {{ s.created_at|date:"d M Y" }}
             {% if s.user_rating %} · {{ s.user_rating.half_stars|half_stars_display }}{% endif %}

@@ -7,14 +7,22 @@ from .models import Essay, Log, Note, Profile, Rating, Shelf, Shelving
 class EssayAdmin(admin.ModelAdmin):
     list_display = (
         "title",
-        "author",
+        "display_author",
         "publication",
         "published_year",
         "is_published",
         "is_seed",
     )
     list_filter = ("is_published", "is_seed", "published_year")
-    search_fields = ("title", "author", "publication", "url", "slug")
+    search_fields = (
+        "title",
+        "author",
+        "submitted_by__profile__display_name",
+        "submitted_by__profile__handle",
+        "publication",
+        "url",
+        "slug",
+    )
     prepopulated_fields = {"slug": ("title",)}
 
 

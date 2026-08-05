@@ -12,7 +12,7 @@
       {% if essay.reading_minutes %} · {{ essay.reading_minutes }} min{% endif %}
     </div>
     <h1>{{ essay.title }}</h1>
-    <div class="byline">{{ essay.author }}</div>
+    <div class="byline">{{ essay.display_author }}</div>
     <div class="essay-actions">
       {% include "shelf/partials/log_control.html" with essay=essay logged=logged rating=rating %}
       <a class="btn ghost" href="{{ essay.url }}" target="_blank" rel="noopener">Read at the publisher →</a>
@@ -76,7 +76,7 @@
           <span class="row-t" style="font-size:16px">
             <em style="background:{{ r.essay|ink_bg }}"></em>{{ r.essay.title }}
           </span>
-          <div class="row-b">{{ r.essay.author }}{% if r.essay.published_year %} · {{ r.essay.published_year }}{% endif %}</div>
+          <div class="row-b">{{ r.essay.display_author }}{% if r.essay.published_year %} · {{ r.essay.published_year }}{% endif %}</div>
           <div class="rel-why">shares {{ r.shared|join:", " }}</div>
         </span>
       </a>

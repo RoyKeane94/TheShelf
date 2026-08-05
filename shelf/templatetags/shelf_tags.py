@@ -31,9 +31,14 @@ def spine_height(essay):
 
 @register.filter
 def half_stars_display(half_stars):
-    if not half_stars:
+    # A bound form hands back the raw POST string rather than a cleaned int, so this
+    # has to cope with "7" as well as 7, and with the junk an unvalidated field allows.
+    try:
+        value = float(half_stars) / 2
+    except (TypeError, ValueError):
         return ""
-    value = half_stars / 2
+    if not value:
+        return ""
     text = f"{value:g}"
     return mark_safe(f'{text} <em>/ 5</em>')
 

@@ -237,6 +237,23 @@ class AddEssayViewTests(TestCase):
         self.assertRedirects(response, essay.get_absolute_url())
         self.assertTrue(Shelving.objects.filter(user=self.user, essay=essay).exists())
 
+    def test_add_accepts_an_empty_optional_blurb(self):
+        response = self.client.post(
+            reverse("add_htmx"),
+            {
+                "title": "No Blurb Needed",
+                "url": "https://example.test/no-blurb",
+                "blurb": "",
+                "form_prefix": "mod",
+            },
+            HTTP_HX_REQUEST="true",
+        )
+        essay = Essay.objects.get(url="https://example.test/no-blurb")
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response["HX-Redirect"], essay.get_absolute_url())
+        self.assertEqual(essay.blurb, "")
+        self.assertTrue(Shelving.objects.filter(user=self.user, essay=essay).exists())
+
     def test_htmx_add_reports_the_new_page_and_escapes_the_title(self):
         """A quote in the title must not break the HX-Trigger JSON header."""
         response = self.client.post(
@@ -261,6 +278,61 @@ class AddEssayViewTests(TestCase):
             HTTP_HX_REQUEST="true",
         )
         self.assertEqual(response.status_code, 422)
+        self.assertFalse(Essay.objects.exists())
+        # The 422 body must carry the re-rendered form, since that is what the
+        # client swaps back in. An empty body is a submit button that does nothing.
+        self.assertContains(response, 'name="title"', status_code=422)
+        self.assertContains(response, "errorlist", status_code=422)
+
+    def test_invalid_add_with_a_star_rating_re_renders_instead_of_erroring(self):
+        """A bound form hands the star partial a string, which used to blow up on /."""
+        response = self.client.post(
+            reverse("add_htmx"),
+            {
+                "title": "Rated But Wrong",
+                "url": "https://example.test/rated-but-wrong",
+                "blurb": "too short",
+                "half_stars": "7",
+                "form_prefix": "sec",
+            },
+            HTTP_HX_REQUEST="true",
+        )
+        self.assertEqual(response.status_code, 422)
+        # The rating the user picked survives the round trip.
+        self.assertContains(response, 'value="7"', status_code=422)
+        self.assertContains(response, "3.5", status_code=422)
+        self.assertFalse(Essay.objects.exists())
+
+    def test_a_short_blurb_alone_still_returns_the_form(self):
+        """The commonest near-miss: everything filled in but the blurb is too short."""
+        response = self.client.post(
+            reverse("add_htmx"),
+            {
+                "title": "Nearly There",
+                "url": "https://example.test/nearly",
+                "blurb": "too short",
+                "form_prefix": "sec",
+            },
+            HTTP_HX_REQUEST="true",
+        )
+        self.assertEqual(response.status_code, 422)
+        self.assertContains(response, "Nearly There", status_code=422)
+        self.assertFalse(Essay.objects.exists())
+
+    def test_logged_out_htmx_add_is_told_to_navigate_to_the_login_page(self):
+        self.client.logout()
+        response = self.client.post(
+            reverse("add_htmx"),
+            {
+                "title": "Anonymous",
+                "url": "https://example.test/anon",
+                "blurb": "A blurb long enough to be valid.",
+            },
+            HTTP_HX_REQUEST="true",
+        )
+        # Not a 302: XHR would follow it and swap the login page into the form.
+        self.assertEqual(response.status_code, 204)
+        self.assertIn(reverse("login"), response["HX-Redirect"])
         self.assertFalse(Essay.objects.exists())
 
     def test_the_form_partial_is_rendered_into_both_places(self):

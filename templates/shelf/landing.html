@@ -19,7 +19,7 @@
       <a class="spine" role="listitem"
          style="height:{{ e|spine_height }}px;background:{{ e|ink_bg }};color:{{ e|ink_fg }}"
          href="{{ e.get_absolute_url }}"
-         title="{{ e.title }} — {{ e.author }}"><span>{{ e.title }}</span></a>
+         title="{{ e.title }} — {{ e.display_author }}"><span>{{ e.title }}</span></a>
       {% endfor %}
     </div>
     <div class="board"></div>
@@ -79,7 +79,7 @@
           <div class="eg-k">Which turned up</div>
           <a class="eg-find" href="{{ example.found.get_absolute_url }}"><i style="background:{{ example.found|ink_bg }}"></i>{{ example.found.title }}</a>
           <p>
-            {{ example.found.author }}{% if example.found.published_year %}, {{ example.found.published_year }}{% endif %}.
+            {{ example.found.display_author }}{% if example.found.published_year %}, {{ example.found.published_year }}{% endif %}.
             {% if example.holder %}Sitting on @{{ example.holder.user.profile.handle }}'s shelf since {{ example.since_year }}{% elif example.since_year %}On shelves since {{ example.since_year }}{% endif %}, and not something they would have gone looking for.
           </p>
         </div>
@@ -103,7 +103,7 @@
         <div class="sc-desc">{{ s.description }}</div>
         <div class="sc-strip">
           {% for sh in s.active_shelvings|slice:":8" %}
-          <i style="background:{{ sh.essay|ink_bg }}" title="{{ sh.essay.title }} · {{ sh.essay.author }}"></i>
+          <i style="background:{{ sh.essay|ink_bg }}" title="{{ sh.essay.title }} · {{ sh.essay.display_author }}"></i>
           {% endfor %}
         </div>
         <div class="sc-n">{{ s.n_items }} on the shelf · hover a spine</div>
@@ -127,7 +127,7 @@
             <span style="flex:1">
               <div class="act"><b>@{{ f.user.profile.handle }}</b> shelved to <b>{{ f.shelf.name }}</b></div>
               <span class="row-t"><em style="background:{{ f.essay|ink_bg }}"></em>{{ f.essay.title }}</span>
-              <div class="row-b">{{ f.essay.author }}{% if f.essay.published_year %} · {{ f.essay.published_year }}{% endif %}</div>
+              <div class="row-b">{{ f.essay.display_author }}{% if f.essay.published_year %} · {{ f.essay.published_year }}{% endif %}</div>
             </span>
           </a>
           {% empty %}
@@ -144,7 +144,7 @@
             <span class="row-i">{{ forloop.counter|stringformat:"02d" }}</span>
             <span>
               <span class="row-t">{{ e.title }}</span>
-              <div class="row-b">{{ e.author }}{% if e.published_year %} · {{ e.published_year }}{% endif %}</div>
+              <div class="row-b">{{ e.display_author }}{% if e.published_year %} · {{ e.published_year }}{% endif %}</div>
               {% if e.circ %}
               {% circulation_bar e.circ.first_year e.circ.last_year e.circ.still_going held_min_year as bar %}
               <div class="span"><i style="left:{{ bar.left }}%;right:{{ bar.right }}%"></i></div>

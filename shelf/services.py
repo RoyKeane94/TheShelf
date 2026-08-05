@@ -115,6 +115,7 @@ def add_essay(user, *, title, url, blurb, half_stars=None) -> LogResult:
             slug=unique_essay_slug(title),
             url=normalised,
             title=title.strip(),
+            submitted_by=user,
             author=user.profile.display_name or f"@{user.profile.handle}",
             publication="",
             published_year=None,

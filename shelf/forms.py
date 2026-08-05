@@ -167,7 +167,15 @@ class AccountSettingsForm(forms.Form):
 class AddEssayForm(forms.Form):
     title = forms.CharField(max_length=500)
     url = forms.CharField(max_length=1000)
-    blurb = forms.CharField(min_length=15, max_length=2000, widget=forms.Textarea)
+    blurb = forms.CharField(
+        min_length=15,
+        max_length=2000,
+        required=False,
+        widget=forms.Textarea,
+        error_messages={
+            "min_length": "Give it at least 15 characters.",
+        },
+    )
     half_stars = forms.IntegerField(required=False, min_value=0, max_value=10)
 
     def clean_title(self):
@@ -185,7 +193,7 @@ class AddEssayForm(forms.Form):
         return normalised
 
     def clean_blurb(self):
-        return self.cleaned_data["blurb"].strip()
+        return (self.cleaned_data.get("blurb") or "").strip()
 
     def clean_half_stars(self):
         value = self.cleaned_data.get("half_stars")

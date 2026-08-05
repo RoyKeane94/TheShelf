@@ -45,15 +45,24 @@ class Essay(TimestampedModel):
     """
     The permanent object. Everything hangs off it.
 
-    Author and publication are plain text at this size. A join table for 150 rows is
-    bookkeeping with no payoff, and promoting them to foreign keys later is a data
-    migration rather than a rewrite.
+    Catalogue author and publication are plain text at this size. User submissions
+    additionally retain their submitter so the public byline follows that profile's
+    current display name rather than freezing a copy at submission time.
     """
 
     slug = models.SlugField(max_length=255, unique=True)
     url = models.URLField(max_length=1000, unique=True)
 
     title = models.CharField(max_length=500)
+    submitted_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="submitted_essays",
+    )
+    # Fixed attribution for catalogue/seed essays and a fallback snapshot for
+    # user-submitted essays. The live byline comes from submitted_by when present.
     author = models.CharField(max_length=300)
     publication = models.CharField(max_length=200, blank=True)
     published_year = models.PositiveSmallIntegerField(null=True, blank=True, db_index=True)
@@ -77,6 +86,15 @@ class Essay(TimestampedModel):
 
     def get_absolute_url(self):
         return reverse("essay", args=[self.slug])
+
+    @property
+    def display_author(self):
+        if self.submitted_by_id:
+            profile = getattr(self.submitted_by, "profile", None)
+            if profile:
+                return profile.display_name or f"@{profile.handle}"
+            return f"@{self.submitted_by.username}"
+        return self.author
 
     @property
     def ink(self):

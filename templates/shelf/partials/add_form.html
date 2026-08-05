@@ -32,13 +32,14 @@
   </div>
 
   <div class="field-row">
-    <label for="{{ form_prefix }}-desc">Why it is worth reading</label>
+    <label for="{{ form_prefix }}-desc">Why it is worth reading <span style="text-transform:none;letter-spacing:0;font-weight:400">(Optional but preferred!)</span></label>
     <textarea id="{{ form_prefix }}-desc" name="blurb"
               placeholder="One or two lines. What does it change for the person who reads it?"
               class="{% if form.blurb.errors %}bad{% endif %}"
               x-data="{ n: {{ form.blurb.value|default:''|length }} }"
               x-on:input="n = $el.value.trim().length">{{ form.blurb.value|default:'' }}</textarea>
-    <p class="field-hint" id="{{ form_prefix }}-count" x-text="n === 1 ? '1 character' : n + ' characters'">0 characters</p>
+    <p class="field-hint" id="{{ form_prefix }}-count"
+       x-text="n === 0 ? 'Optional — leave blank if you prefer' : (n < 15 ? (15 - n) + ' more characters needed' : n + ' characters')">Optional — leave blank if you prefer</p>
     {% if form.blurb.errors %}<ul class="errorlist">{% for e in form.blurb.errors %}<li>{{ e }}</li>{% endfor %}</ul>{% endif %}
   </div>
 

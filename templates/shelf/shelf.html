@@ -23,7 +23,7 @@
             <em style="background:{{ s.essay|ink_bg }}"></em>{{ s.essay.title }}
           </a>
           <div class="row-b">
-            {{ s.essay.author }}{% if s.essay.published_year %} · {{ s.essay.published_year }}{% endif %}
+            {{ s.essay.display_author }}{% if s.essay.published_year %} · {{ s.essay.published_year }}{% endif %}
             {% if s.essay.blurb %} — {{ s.essay.blurb|truncatechars:120 }}{% endif %}
           </div>
           <div style="margin-top:12px">

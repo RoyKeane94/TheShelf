@@ -114,10 +114,32 @@ class AddEssayTests(TestCase):
         )
         self.assertTrue(result.created)
         self.assertEqual(result.essay.title, "Something New")
+        self.assertEqual(result.essay.submitted_by, self.user)
         self.assertTrue(
             Shelving.objects.filter(user=self.user, essay=result.essay).exists(),
             "adding is itself a log, so the submitter is first on the new page",
         )
+
+    def test_submitted_essay_uses_the_profiles_current_display_name(self):
+        self.user.profile.display_name = "First Name"
+        self.user.profile.save(update_fields=["display_name", "updated_at"])
+        result = add_essay(
+            self.user,
+            title="Live Attribution",
+            url="https://example.test/live-attribution",
+            blurb="The displayed name should follow the profile.",
+        )
+        self.assertEqual(result.essay.display_author, "First Name")
+
+        self.user.profile.display_name = "Current Name"
+        self.user.profile.save(update_fields=["display_name", "updated_at"])
+        result.essay.refresh_from_db()
+        self.assertEqual(result.essay.display_author, "Current Name")
+
+    def test_catalogue_essay_keeps_its_fixed_author(self):
+        essay = make_essay("Catalogue Piece", author="Original Writer")
+        self.assertIsNone(essay.submitted_by)
+        self.assertEqual(essay.display_author, "Original Writer")
 
     def test_url_is_normalised_on_the_way_in(self):
         result = add_essay(

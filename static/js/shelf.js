@@ -14,8 +14,14 @@ function showToast(html) {
   clearTimeout(showToast._t);
   showToast._t = setTimeout(() => t.classList.remove("on"), 2400);
 }
-document.body.addEventListener("htmx:afterRequest", (ev) => {
-  // Fallback: some servers send HX-Trigger as a header HTMX already dispatches.
+// HTMX only swaps 2xx by default. A form that fails validation comes back as 422
+// carrying the re-rendered fields, so without this the submit button does nothing
+// and the errors never reach the page.
+document.body.addEventListener("htmx:beforeSwap", (ev) => {
+  if (ev.detail.xhr.status === 422) {
+    ev.detail.shouldSwap = true;
+    ev.detail.isError = false;
+  }
 });
 document.body.addEventListener("toast", (ev) => {
   const detail = ev.detail;

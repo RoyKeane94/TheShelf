@@ -1,4 +1,6 @@
 import json
+from functools import wraps
+from urllib.parse import quote
 
 from django.contrib import messages
 from django.contrib.auth import login, logout, update_session_auth_hash
@@ -14,6 +16,33 @@ from .forms import AccountSettingsForm, AddEssayForm, LoginForm, SignupForm
 from .models import Essay, Log, Note, Profile, Rating, Shelf, Shelving
 from .ranking import circulation, ranked, with_stats
 from .services import add_essay, log_essay, user_has_logged, user_rating
+
+
+def htmx_login_required(next_url):
+    """login_required for endpoints HTMX posts to.
+
+    XHR follows a 302 without telling us, so a logged-out submit would swap the whole
+    login page into the slot the form came from. HX-Redirect navigates instead.
+
+    next_url takes the request and returns where to land after logging in; the POST
+    endpoints themselves are not reachable by GET, so it must be a real page.
+    """
+
+    def decorator(view):
+        @wraps(view)
+        def wrapper(request, *args, **kwargs):
+            if request.user.is_authenticated:
+                return view(request, *args, **kwargs)
+            destination = f"{reverse('login')}?next={quote(next_url(request, **kwargs))}"
+            if request.headers.get("HX-Request"):
+                response = HttpResponse(status=204)
+                response["HX-Redirect"] = destination
+                return response
+            return redirect(destination)
+
+        return wrapper
+
+    return decorator
 
 
 def _shelf_cards():
@@ -416,7 +445,7 @@ def add(request):
     )
 
 
-@login_required
+@htmx_login_required(lambda request, slug, **kwargs: reverse("essay", args=[slug]))
 @require_POST
 def log(request, slug):
     essay = get_object_or_404(Essay, slug=slug, is_published=True)
@@ -594,7 +623,7 @@ def add_modal(request):
     )
 
 
-@login_required
+@htmx_login_required(lambda request, **kwargs: reverse("add"))
 @require_POST
 def add_htmx(request):
     """HTMX submit of the shared add form (landing section or modal)."""
